@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Hatfield-McCoy Feud</title>
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="../../index.html" class="site-title">Hatfield-McCoy Feud</a>
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="../../pages/research-portal/index.html" class="nav-link">Research Portal</a></li>
+                    <li><a href="../../pages/timeline/index.html" class="nav-link">Timeline</a></li>
+                    <li><a href="../../pages/people/index.html" class="nav-link">People</a></li>
+                    <li><a href="../../pages/locations/index.html" class="nav-link">Locations</a></li>
+                    <li><a href="../../pages/primary-sources/index.html" class="nav-link">Primary Sources</a></li>
+                    <li><a href="../../pages/gallery/index.html" class="nav-link active">Gallery</a></li>
+                    <li><a href="../../pages/analysis/index.html" class="nav-link">Analysis</a></li>
+                    <li><a href="../../pages/family-stories/index.html" class="nav-link">Family Stories</a></li>
+                    <li><a href="../../pages/resources/index.html" class="nav-link">Resources</a></li>
+                    <li><a href="../../pages/citation-generator.html" class="nav-link">Citation Generator</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero bg-light">
+            <div class="container">
+                <h1 class="hero-title">Historical Photo Gallery</h1>
+                <p class="hero-subtitle">Explore photographs, illustrations, and visual materials related to the Hatfield-McCoy feud and its legacy.</p>
+            </div>
+        </section>
+
+        <section class="container my-lg">
+            <div class="gallery-controls">
+                <div class="filter-controls">
+                    <h2>Filter Images</h2>
+                    <div class="filter-group">
+                        <label for="time-filter">Time Period:</label>
+                        <select id="time-filter" class="filter-select">
+                            <option value="all">All Periods</option>
+                            <option value="1860s-1870s">1860s-1870s (Early Tensions)</option>
+                            <option value="1880s">1880s (Height of the Feud)</option>
+                            <option value="1890s-1900s">1890s-1900s (Resolution)</option>
+                            <option value="1940s-1950s">1940s-1950s (Mid-Century Legacy)</option>
+                            <option value="modern">Modern Commemorations</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="type-filter">Image Type:</label>
+                        <select id="type-filter" class="filter-select">
+                            <option value="all">All Types</option>
+                            <option value="portraits">Portraits</option>
+                            <option value="locations">Locations</option>
+                            <option value="events">Events</option>
+                            <option value="documents">Documents</option>
+                            <option value="artifacts">Artifacts</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="family-filter">Family:</label>
+                        <select id="family-filter" class="filter-select">
+                            <option value="all">All</option>
+                            <option value="hatfield">Hatfield</option>
+                            <option value="mccoy">McCoy</option>
+                            <option value="other">Other/Neutral</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="view-controls">
+                    <button id="grid-view" class="view-button active">Grid View</button>
+                    <button id="list-view" class="view-button">List View</button>
+                </div>
+            </div>
+            
+            <div id="gallery-container" class="gallery-grid">
+                <!-- Gallery items will be dynamically generated -->
+            </div>
+        </section>
+        
+        <section class="bg-light py-lg">
+            <div class="container">
+                <h2 class="mb-md">Featured Collections</h2>
+                
+                <div class="featured-collections">
+                    <div class="featured-collection">
+                        <img src="../../images/family-portraits-collection.jpg" alt="Family Portraits Collection" class="featured-image">
+                        <div class="featured-content">
+                            <h3>Family Portraits</h3>
+                            <p>Rare photographic portraits of key figures from both the Hatfield and McCoy families, including Devil Anse Hatfield, Randolph McCoy, and their immediate family members.</p>
+                            <button class="btn-text collection-trigger" data-collection="portraits">View Collection</button>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-collection">
+                        <img src="../../images/locations-photos-collection.jpg" alt="Historical Locations Collection" class="featured-image">
+                        <div class="featured-content">
+                            <h3>Historical Locations</h3>
+                            <p>Photographs of significant locations in the feud, including family homesteads, the Tug Fork River, courthouses, and other sites where key events took place.</p>
+                            <button class="btn-text collection-trigger" data-collection="locations">View Collection</button>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-collection">
+                        <img src="../../images/newspaper-collection.jpg" alt="Newspaper Coverage Collection" class="featured-image">
+                        <div class="featured-content">
+                            <h3>Media Coverage</h3>
+                            <p>Visual materials from newspaper and magazine coverage of the feud, including illustrations, headlines, and photographs that shaped public perception.</p>
+                            <button class="btn-text collection-trigger" data-collection="media">View Collection</button>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-collection">
+                        <img src="../../images/artifacts-collection.jpg" alt="Artifacts Collection" class="featured-image">
+                        <div class="featured-content">
+                            <h3>Historical Artifacts</h3>
+                            <p>Photographs of weapons, tools, household items, and other artifacts owned by the Hatfield and McCoy families during the feud period.</p>
+                            <button class="btn-text collection-trigger" data-collection="artifacts">View Collection</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container my-lg">
+            <h2 class="mb-md">Recently Added Images</h2>
+            <div class="recent-images-grid">
+                <div class="recent-image">
+                    <img src="../../images/recent-photo-1.jpg" alt="Recently discovered Hatfield family photograph" class="recent-img">
+                    <div class="recent-content">
+                        <h3>Newly Discovered Hatfield Family Photograph (1888)</h3>
+                        <p>Recently uncovered photograph showing members of the Hatfield family outside their cabin in West Virginia.</p>
+                        <button class="btn-text image-modal-trigger" data-image="recent-1">View Full Size</button>
+                    </div>
+                </div>
+                
+                <div class="recent-image">
+                    <img src="../../images/recent-photo-2.jpg" alt="Colorized portrait of Randolph McCoy" class="recent-img">
+                    <div class="recent-content">
+                        <h3>Colorized Portrait of Randolph McCoy</h3>
+                        <p>Digitally colorized version of the classic portrait of Randolph McCoy, created using historical reference materials.</p>
+                        <button class="btn-text image-modal-trigger" data-image="recent-2">View Full Size</button>
+                    </div>
+                </div>
+                
+                <div class="recent-image">
+                    <img src="../../images/recent-photo-3.jpg" alt="Restored photograph of Pawpaw Creek" class="recent-img">
+                    <div class="recent-content">
+                        <h3>Restored Photograph of Pawpaw Creek (1890s)</h3>
+                        <p>Digitally restored photograph showing Pawpaw Creek, site of the 1882 execution of three McCoy brothers.</p>
+                        <button class="btn-text image-modal-trigger" data-image="recent-3">View Full Size</button>
+                    </div>
+                </div>
+                
+                <div class="recent-image">
+                    <img src="../../images/recent-photo-4.jpg" alt="Life Magazine 1944 article scan" class="recent-img">
+                    <div class="recent-content">
+                        <h3>High-Resolution Scan of 1944 Life Magazine Article</h3>
+                        <p>Enhanced scan of the famous Life Magazine article featuring Shirley Hatfield and Frankie McCoy working together during WWII.</p>
+                        <button class="btn-text image-modal-trigger" data-image="recent-4">View Full Size</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Image Modal -->
+        <div id="image-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <img id="modal-image" src="" alt="Full size image">
+                <div id="modal-details">
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-description"></p>
+                    <div id="modal-metadata">
+                        <p><strong>Date:</strong> <span id="modal-date"></span></p>
+                        <p><strong>Source:</strong> <span id="modal-source"></span></p>
+                        <p><strong>Location:</strong> <span id="modal-location"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 class="footer-heading">About</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../../pages/about/index.html">About this Project</a></li>
+                        <li class="footer-link"><a href="../../pages/bibliography.html">Bibliography</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../../pages/timeline/index.html">Timeline</a></li>
+                        <li class="footer-link"><a href="../../pages/people/index.html">People</a></li>
+                        <li class="footer-link"><a href="../../pages/locations/index.html">Locations</a></li>
+                        <li class="footer-link"><a href="../../pages/primary-sources/index.html">Primary Sources</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../../pages/gallery/index.html">Gallery</a></li>
+                        <li class="footer-link"><a href="../../pages/analysis/index.html">Analysis</a></li>
+                        <li class="footer-link"><a href="../../pages/family-stories/index.html">Family Stories</a></li>
+                        <li class="footer-link"><a href="../../pages/citation-generator.html">Citation Generator</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../../pages/contact/index.html">Contact Us</a></li>
+                        <li class="footer-link"><a href="../../pages/resources/index.html">Additional Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>NotLizAI: committed to integrity and accuracy</p>
+                <p>&copy; 2025 Hatfield-McCoy Feud Research Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/image-generator.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery data - in a real implementation, this would be loaded from a database or JSON file
+            const galleryData = [
+                {
+                    id: "devil-anse-portrait",
+                    title: "Devil Anse Hatfield Portrait",
+                    description: "Formal portrait of William Anderson 'Devil Anse' Hatfield, patriarch of the Hatfield family.",
+                    type: "portraits",
+                    period: "1880s",
+                    family: "hatfield",
+                    date: "c. 1888",
+                    source: "West Virginia State Archives",
+                    location: "Logan County, West Virginia",
+                    imagePath: "../../images/devil-anse-portrait.jpg"
+                },
+                {
+                    id: "randolph-mccoy-portrait",
+                    title: "Randolph McCoy Portrait",
+                    description: "Formal portrait of Randolph McCoy, patriarch of the McCoy family.",
+                    type: "portraits",
+                    period: "1880s",
+                    family: "mccoy",
+                    date: "c. 1885",
+                    source: "Pike County Historical Society",
+                    location: "Pike County, Kentucky",
+                    imagePath: "../../images/randolph-mccoy-portrait.jpg"
+                },
+                {
+                    id: "hatfield-family-group",
+                    title: "Hatfield Family Group",
+                    description: "Group photograph of Devil Anse Hatfield with his sons and close associates, all armed with rifles.",
+                    type: "portraits",
+                    period: "1880s",
+                    family: "hatfield",
+                    date: "1888",
+                    source: "West Virginia State Archives",
+                    location: "Logan County, West Virginia",
+                    imagePath: "../../images/hatfield-family-group.jpg"
+                },
+                {
+                    id: "mccoy-cabin",
+                    title: "McCoy Family Cabin",
+                    description: "Photograph of the McCoy family cabin along Blackberry Fork of Pond Creek, site of the 1888 New Year's Night attack.",
+                    type: "locations",
+                    period: "1890s-1900s",
+                    family: "mccoy",
+                    date: "c. 1895",
+                    source: "Pike County Historical Society",
+                    location: "Pike County, Kentucky",
+                    imagePath: "../../images/mccoy-cabin.jpg"
+                },
+                {
+                    id: "hatfield-cabin",
+                    title: "Devil Anse Hatfield's Home",
+                    description: "Photograph of Devil Anse Hatfield's home in Logan County, West Virginia.",
+                    type: "locations",
+                    period: "1890s-1900s",
+                    family: "hatfield",
+                    date: "c. 1900",
+                    source: "West Virginia State Archives",
+                    location: "Logan County, West Virginia",
+                    imagePath: "../../images/hatfield-cabin.jpg"
+                },
+                {
+                    id: "tug-fork-river",
+                    title: "Tug Fork River",
+                    description: "Photograph of the Tug Fork River, which formed the boundary between Kentucky and West Virginia and separated the Hatfield and McCoy territories.",
+                    type: "locations",
+                    period: "1890s-1900s",
+                    family: "other",
+                    date: "c. 1900",
+                    source: "West Virginia State Archives",
+                    location: "Kentucky-West Virginia Border",
+                    imagePath: "../../images/tug-fork-river.jpg"
+                },
+                {
+                    id: "pawpaw-creek",
+                    title: "Pawpaw Creek",
+                    description: "Photograph of Pawpaw Creek, where three McCoy brothers were tied to trees and executed by the Hatfields in 1882.",
+                    type: "locations",
+                    period: "1890s-1900s",
+                    family: "other",
+                    date: "c. 1900",
+                    source: "Pike County Historical Society",
+                    location: "Kentucky-West Virginia Border",
+                    imagePath: "../../images/pawpaw-creek.jpg"
+                },
+                {
+                    id: "courthouse-pikeville",
+                    title: "Pike County Courthouse",
+                    description: "Photograph of the Pike County Courthouse in Pikeville, Kentucky, where many of the legal proceedings related to the feud took place.",
+                    type: "locations",
+                    period: "1890s-1900s",
+                    family: "other",
+                    date: "c. 1890",
+                    source: "Pike County Historical Society",
+                    location: "Pikeville, Kentucky",
+                    imagePath: "../../images/courthouse-pikeville.jpg"
+                },
+                {
+                    id: "newspaper-coverage-1888",
+                    title: "Newspaper Coverage (1888)",
+                    description: "Front page of the Louisville Courier-Journal with coverage of the New Year's Night attack on the McCoy family.",
+                    type: "documents",
+                    period: "1880s",
+                    family: "other",
+                    date: "January 1888",
+                    source: "Louisville Courier-Journal Archives",
+                    location: "Louisville, Kentucky",
+                    imagePath: "../../images/newspaper-coverage-1888.jpg"
+                },
+                {
+                    id: "hatfield-trial-illustration",
+                    title: "Hatfield Trial Illustration",
+                    description: "Newspaper illustration depicting the trial of the Hatfields for the murder of McCoy family members.",
+                    type: "events",
+                    period: "1880s",
+                    family: "hatfield",
+                    date: "1889",
+                    source: "Harper's Weekly",
+                    location: "Pikeville, Kentucky",
+                    imagePath: "../../images/hatfield-trial-illustration.jpg"
+                },
+                {
+                    id: "life-magazine-1944",
+                    title: "Life Magazine Article (1944)",
+                    description: "Pages from the 1944 Life Magazine article featuring Shirley Hatfield and Frankie McCoy working together at a WWII uniform factory.",
+                    type: "documents",
+                    period: "1940s-1950s",
+                    family: "both",
+                    date: "August 1944",
+                    source: "Life Magazine Archives",
+                    location: "Detroit, Michigan",
+                    imagePath: "../../images/life-magazine-1944.jpg"
+                },
+                {
+                    id: "hatfield-rifle",
+                    title: "Devil Anse Hatfield's Rifle",
+                    description: "Photograph of a rifle owned by Devil Anse Hatfield during the feud period.",
+                    type: "artifacts",
+                    period: "1880s",
+                    family: "hatfield",
+                    date: "c. 1880",
+                    source: "West Virginia State Museum",
+                    location: "Charleston, West Virginia",
+                    imagePath: "../../images/hatfield-rifle.jpg"
+                },
+                {
+                    id: "feud-monument",
+                    title: "Hatfield-McCoy Feud Monument",
+                    description: "Modern monument commemorating the Hatfield-McCoy feud and subsequent reconciliation between the families.",
+                    type: "locations",
+                    period: "modern",
+                    family: "both",
+                    date: "2000",
+                    source: "Pike County Tourism Commission",
+                    location: "Pikeville, Kentucky",
+                    imagePath: "../../images/feud-monument.jpg"
+                },
+                {
+                    id: "devil-anse-grave",
+                    title: "Devil Anse Hatfield's Grave",
+                    description: "Photograph of the life-size marble statue marking Devil Anse Hatfield's grave in the Hatfield Family Cemetery.",
+                    type: "locations",
+                    period: "1890s-1900s",
+                    family: "hatfield",
+                    date: "1921",
+                    source: "West Virginia State Archives",
+                    location: "Logan County, West Virginia",
+                    imagePath: "../../images/devil-anse-grave.jpg"
+                },
+                {
+                    id: "reunion-1976",
+                    title: "Hatfield-McCoy Reunion (1976)",
+                    description: "Photograph from the 1976 reunion of Hatfield and McCoy descendants, symbolizing the end of the feud.",
+                    type: "events",
+                    period: "modern",
+                    family: "both",
+                    date: "1976",
+                    source: "Pike County Historical Society",
+                    location: "Pikeville, Kentucky",
+                    imagePath: "../../images/reunion-1976.jpg"
+                }
+            ];
+            
+            // Recent images data
+            const recentImagesData = {
+                "recent-1": {
+                    title: "Newly Discovered Hatfield Family Photograph (1888)",
+                    description: "This recently uncovered photograph shows members of the Hatfield family outside their cabin in West Virginia. The image provides rare visual documentation of daily life for the family during the height of the feud.",
+                    date: "c. 1888",
+                    source: "Private Collection, donated to West Virginia State Archives in 2024",
+                    location: "Logan County, West Virginia",
+                    imagePath: "../../images/recent-photo-1.jpg"
+                },
+                "recent-2": {
+                    title: "Colorized Portrait of Randolph McCoy",
+                    description: "This digitally colorized version of the classic portrait of Randolph McCoy was created using historical reference materials to accurately represent clothing colors and skin tones of the period.",
+                    date: "Original c. 1885, Colorized 2025",
+                    source: "Original from Pike County Historical Society, Colorization by Historical Image Project",
+                    location: "Pike County, Kentucky",
+                    imagePath: "../../images/recent-photo-2.jpg"
+                },
+                "recent-3": {
+                    title: "Restored Photograph of Pawpaw Creek (1890s)",
+                    description: "This digitally restored photograph shows Pawpaw Creek, the site where three McCoy brothers were tied to trees and executed by the Hatfields in 1882. The restoration process removed damage and enhanced details while preserving historical accuracy.",
+                    date: "Original c. 1895, Restored 2025",
+                    source: "Original from Pike County Historical Society, Restoration by Historical Image Project",
+                    location: "Kentucky-West Virginia Border",
+                    imagePath: "../../images/recent-photo-3.jpg"
+                },
+                "recent-4": {
+                    title: "High-Resolution Scan of 1944 Life Magazine Article",
+                    description: "This enhanced scan of the famous Life Magazine article features Shirley Hatfield and Frankie McCoy working together at a WWII uniform factory in Detroit. The article highlighted how descendants of the feuding families were cooperating for the war effort.",
+                    date: "August 1944",
+                    source: "Life Magazine Archives, Digitized 2025",
+                    location: "Detroit, Michigan",
+                    imagePath: "../../images/recent-photo-4.jpg"
+                }
+            };
+            
+            // Generate gallery items
+            const galleryContainer = document.getElementById('gallery-container');
+            const timeFilter = document.getElementById('time-filter');
+            const typeFilter = document.getElementById('type-filter');
+            const familyFilter = document.getElementById('family-filter');
+            const gridViewBtn = document.getElementById('grid-view');
+            const listViewBtn = document.getElementById('list-view');
+            
+            // Modal elements
+            const imageModal = document.getElementById('image-modal');
+            const modalImage = document.getElementById('modal-image');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDescription = document.getElementById('modal-description');
+            const modalDate = document.getElementById('modal-date');
+            const modalSource = document.getElementById('modal-source');
+            const modalLocation = document.getElementById('modal-location');
+            const closeModal = document.querySelector('.close-modal');
+            
+            // Generate gallery items
+            function generateGalleryItems(items) {
+                galleryContainer.innerHTML = '';
+                
+                if (items.length === 0) {
+                    galleryContainer.innerHTML = '<p class="no-results">No images match your filter criteria. Please try different filters.</p>';
+                    return;
+                }
+                
+                items.forEach(item => {
+                    const galleryItem = document.createElement('div');
+                    galleryItem.className = 'gallery-item';
+                    galleryItem.setAttribute('data-id', item.id);
+                    galleryItem.setAttribute('data-type', item.type);
+                    galleryItem.setAttribute('data-period', item.period);
+                    galleryItem.setAttribute('data-family', item.family);
+                    
+                    galleryItem.innerHTML = `
+                        <div class="gallery-image">
+                            <img src="${item.imagePath}" alt="${item.title}" class="gallery-img">
+                        </div>
+                        <div class="gallery-content">
+                            <h3 class="gallery-title">${item.title}</h3>
+                            <p class="gallery-description">${item.description}</p>
+                            <div class="gallery-metadata">
+                                <span class="gallery-date">${item.date}</span>
+                                <span class="gallery-type">${item.type.charAt(0).toUpperCase() + item.type.slice(1)}</span>
+                                <span class="gallery-family">${item.family.charAt(0).toUpperCase() + item.family.slice(1)}</span>
+                            </div>
+                            <button class="btn-text gallery-view-btn" data-id="${item.id}">View Full Size</button>
+                        </div>
+                    `;
+                    
+                    galleryContainer.appendChild(galleryItem);
+                });
+                
+                // Add event listeners to view buttons
+                document.querySelectorAll('.gallery-view-btn').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const itemId = this.getAttribute('data-id');
+                        const item = galleryData.find(i => i.id === itemId);
+                        
+                        if (item) {
+                            openModal(item);
+                        }
+                    });
+                });
+            }
+            
+            // Filter gallery items
+            function filterGalleryItems() {
+                const timeValue = timeFilter.value;
+                const typeValue = typeFilter.value;
+                const familyValue = familyFilter.value;
+                
+                const filteredItems = galleryData.filter(item => {
+                    const matchesTime = timeValue === 'all' || item.period === timeValue;
+                    const matchesType = typeValue === 'all' || item.type === typeValue;
+                    const matchesFamily = familyValue === 'all' || item.family === familyValue;
+                    
+                    return matchesTime && matchesType && matchesFamily;
+                });
+                
+                generateGalleryItems(filteredItems);
+            }
+            
+            // Toggle view mode
+            function toggleViewMode(mode) {
+                if (mode === 'grid') {
+                    galleryContainer.className = 'gallery-grid';
+                    gridViewBtn.classList.add('active');
+                    listViewBtn.classList.remove('active');
+                } else {
+                    galleryContainer.className = 'gallery-list';
+                    gridViewBtn.classList.remove('active');
+                    listViewBtn.classList.add('active');
+                }
+            }
+            
+            // Open modal with image details
+            function openModal(item) {
+                modalImage.src = item.imagePath;
+                modalImage.alt = item.title;
+                modalTitle.textContent = item.title;
+                modalDescription.textContent = item.description;
+                modalDate.textContent = item.date;
+                modalSource.textContent = item.source;
+                modalLocation.textContent = item.location;
+                
+                imageModal.style.display = 'block';
+            }
+            
+            // Close modal
+            function closeModalFunc() {
+                imageModal.style.display = 'none';
+            }
+            
+            // Event listeners
+            timeFilter.addEventListener('change', filterGalleryItems);
+            typeFilter.addEventListener('change', filterGalleryItems);
+            familyFilter.addEventListener('change', filterGalleryItems);
+            
+            gridViewBtn.addEventListener('click', function() {
+                toggleViewMode('grid');
+            });
+            
+            listViewBtn.addEventListener('click', function() {
+                toggleViewMode('list');
+            });
+            
+            closeModal.addEventListener('click', closeModalFunc);
+            
+            window.addEventListener('click', function(event) {
+                if (event.target === imageModal) {
+                    closeModalFunc();
+                }
+            });
+            
+            // Collection trigger buttons
+            document.querySelectorAll('.collection-trigger').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const collection = this.getAttribute('data-collection');
+                    
+                    // Set filter values based on collection
+                    if (collection === 'portraits') {
+                        typeFilter.value = 'portraits';
+                        timeFilter.value = 'all';
+                        familyFilter.value = 'all';
+                    } else if (collection === 'locations') {
+                        typeFilter.value = 'locations';
+                        timeFilter.value = 'all';
+                        familyFilter.value = 'all';
+                    } else if (collection === 'media') {
+                        typeFilter.value = 'documents';
+                        timeFilter.value = 'all';
+                        familyFilter.value = 'all';
+                    } else if (collection === 'artifacts') {
+                        typeFilter.value = 'artifacts';
+                        timeFilter.value = 'all';
+                        familyFilter.value = 'all';
+                    }
+                    
+                    filterGalleryItems();
+                    
+                    // Scroll to gallery
+                    document.querySelector('.gallery-controls').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+            
+            // Recent image modal triggers
+            document.querySelectorAll('.image-modal-trigger').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const imageId = this.getAttribute('data-image');
+                    const imageData = recentImagesData[imageId];
+                    
+                    if (imageData) {
+                        modalImage.src = imageData.imagePath;
+                        modalImage.alt = imageData.title;
+                        modalTitle.textContent = imageData.title;
+                        modalDescription.textContent = imageData.description;
+                        modalDate.textContent = imageData.date;
+                        modalSource.textContent = imageData.source;
+                        modalLocation.textContent = imageData.location;
+                        
+                        imageModal.style.display = 'block';
+                    }
+                });
+            });
+            
+            // Initialize gallery
+            generateGalleryItems(galleryData);
+        });
+    </script>
+</body>
+</html>

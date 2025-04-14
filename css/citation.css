@@ -1,0 +1,249 @@
+/* Citation Generator Styles for Hatfield-McCoy Feud Research Website */
+
+.citation-generator {
+  background-color: var(--color-bg-ui);
+  border-radius: var(--border-radius-md);
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.citation-generator-header {
+  margin-bottom: 1.5rem;
+}
+
+.citation-generator-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.citation-generator-description {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+
+/* Citation Form */
+.citation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+}
+
+.form-input, .form-select {
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-accent-3);
+  font-family: var(--font-ui);
+  font-size: var(--font-size-base);
+  background-color: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus, .form-select:focus {
+  outline: none;
+  border-color: var(--color-accent-1);
+  box-shadow: 0 0 0 3px rgba(139, 46, 22, 0.2);
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237D6C55' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.form-help {
+  font-family: var(--font-ui);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+/* Citation Style Selector */
+.citation-styles {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.style-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.style-radio {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-accent-3);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.style-radio:checked {
+  border-color: var(--color-accent-1);
+}
+
+.style-radio:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-accent-1);
+  border-radius: 50%;
+}
+
+.style-label {
+  font-family: var(--font-ui);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+/* Citation Result */
+.citation-result-container {
+  margin-top: 2rem;
+  display: none;
+}
+
+.citation-result-container.active {
+  display: block;
+}
+
+.citation-result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.citation-result-title {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: var(--font-size-md);
+  margin: 0;
+}
+
+.citation-result {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-accent-3);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 1rem;
+}
+
+.citation-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.copy-button, .download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-bg-ui);
+  border: 1px solid var(--color-accent-3);
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copy-button:hover, .download-button:hover {
+  background-color: var(--color-accent-3);
+  color: white;
+}
+
+.copy-button svg, .download-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Citation Examples */
+.citation-examples {
+  margin-top: 3rem;
+}
+
+.examples-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  margin-bottom: 1rem;
+}
+
+.example-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.example-item {
+  background-color: white;
+  padding: 1rem;
+  border-radius: var(--border-radius-sm);
+  border-left: 4px solid var(--color-accent-3);
+}
+
+.example-label {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  margin-bottom: 0.5rem;
+  color: var(--color-accent-3);
+}
+
+.example-citation {
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .citation-generator {
+    padding: 1.5rem;
+  }
+  
+  .citation-styles {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .citation-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .citation-generator {
+    padding: 1rem;
+  }
+}

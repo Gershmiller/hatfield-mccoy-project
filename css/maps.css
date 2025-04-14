@@ -1,0 +1,339 @@
+/* Map styles for the Hatfield-McCoy Feud website */
+
+.map-container {
+    height: 500px;
+    width: 100%;
+    margin: 20px 0;
+    border: 3px solid #6B4423;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f5f5f5;
+}
+
+.map-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.map-layers {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.map-layers button {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.map-layers button.active {
+    background-color: #6B4423;
+    color: white;
+    border-color: #5D4037;
+}
+
+.map-layers button:hover {
+    background-color: #e0e0e0;
+}
+
+.map-layers button.active:hover {
+    background-color: #5D4037;
+}
+
+/* Location filter styles */
+#location-filter {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Custom marker styles */
+.hatfield-marker {
+    background-color: #4CAF50;
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: -10px !important;
+    margin-top: -10px !important;
+}
+
+.mccoy-marker {
+    background-color: #F44336;
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: -10px !important;
+    margin-top: -10px !important;
+}
+
+.conflict-marker {
+    background-color: #9C27B0;
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: -10px !important;
+    margin-top: -10px !important;
+}
+
+.modern-marker {
+    background-color: #2196F3;
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: -10px !important;
+    margin-top: -10px !important;
+}
+
+/* Popup styles */
+.leaflet-popup-content-wrapper {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 0;
+}
+
+.leaflet-popup-content {
+    margin: 0;
+    padding: 0;
+}
+
+.popup-content {
+    padding: 15px;
+}
+
+.popup-header {
+    background-color: #6B4423;
+    color: white;
+    padding: 10px 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: -1px;
+    margin-bottom: 0;
+}
+
+.popup-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.popup-body {
+    padding: 10px 15px;
+}
+
+.popup-footer {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e0e0e0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: right;
+}
+
+.popup-footer button {
+    padding: 5px 10px;
+    background-color: #6B4423;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.popup-footer button:hover {
+    background-color: #5D4037;
+}
+
+/* Modal styles for location details */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Location detail styles */
+.location-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.location-detail h2 {
+    margin-top: 0;
+    color: #6B4423;
+    border-bottom: 2px solid #E8D9C0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.detail-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.detail-content {
+    line-height: 1.6;
+}
+
+.detail-content h3 {
+    color: #5D4037;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.detail-content p {
+    margin-bottom: 15px;
+}
+
+/* Location card styles */
+.location-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: white;
+    height: 100%;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.location-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.location-content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.location-name {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #6B4423;
+    font-size: 1.2rem;
+}
+
+.location-type {
+    color: #5D4037;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.location-description {
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.location-details {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 10px;
+    margin-top: auto;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.detail-label {
+    font-weight: bold;
+    color: #5D4037;
+}
+
+.detail-value {
+    text-align: right;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .map-container {
+        height: 400px;
+    }
+    
+    .map-controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-container {
+        height: 300px;
+    }
+    
+    .location-image {
+        height: 150px;
+    }
+}

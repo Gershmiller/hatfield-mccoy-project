@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Portal - Hatfield-McCoy Feud</title>
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="../../index.html" class="site-title">Hatfield-McCoy Feud</a>
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="../../pages/research-portal/index.html" class="nav-link active">Research Portal</a></li>
+                    <li><a href="../../pages/timeline/index.html" class="nav-link">Timeline</a></li>
+                    <li><a href="../../pages/people/index.html" class="nav-link">People</a></li>
+                    <li><a href="../../pages/locations/index.html" class="nav-link">Locations</a></li>
+                    <li><a href="../../pages/primary-sources/index.html" class="nav-link">Primary Sources</a></li>
+                    <li><a href="../../pages/gallery/index.html" class="nav-link">Gallery</a></li>
+                    <li><a href="../../pages/analysis/index.html" class="nav-link">Analysis</a></li>
+                    <li><a href="../../pages/family-stories/index.html" class="nav-link">Family Stories</a></li>
+                    <li><a href="../../pages/resources/index.html" class="nav-link">Resources</a></li>
+                    <li><a href="../../pages/citation-generator.html" class="nav-link">Citation Generator</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero bg-light">
+            <div class="container">
+                <h1 class="hero-title">Research Portal</h1>
+                <p class="hero-subtitle">Your gateway to comprehensive research on the Hatfield-McCoy feud, with advanced search capabilities and curated collections of historical materials.</p>
+            </div>
+        </section>
+
+        <section class="container my-lg">
+            <h2>Advanced Search</h2>
+            <p class="lead">Search across all historical materials, including documents, biographies, locations, and analysis.</p>
+            
+            <div class="search-form">
+                <div class="search-input-group">
+                    <input type="text" id="search-input" class="search-input" placeholder="Search for people, events, locations...">
+                    <button id="search-button" class="btn btn-primary">Search</button>
+                </div>
+                
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <label for="content-type">Content Type:</label>
+                        <select id="content-type" class="filter-select">
+                            <option value="all">All Content</option>
+                            <option value="people">People</option>
+                            <option value="events">Events</option>
+                            <option value="locations">Locations</option>
+                            <option value="documents">Documents</option>
+                            <option value="photos">Photographs</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="time-period">Time Period:</label>
+                        <select id="time-period" class="filter-select">
+                            <option value="all">All Periods</option>
+                            <option value="1863-1870">1863-1870 (Early Tensions)</option>
+                            <option value="1871-1882">1871-1882 (Escalation)</option>
+                            <option value="1883-1890">1883-1890 (Height of Violence)</option>
+                            <option value="1891-1900">1891-1900 (Resolution)</option>
+                            <option value="1901-1950">1901-1950 (Legacy)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="family">Family:</label>
+                        <select id="family" class="filter-select">
+                            <option value="all">All Families</option>
+                            <option value="hatfield">Hatfield</option>
+                            <option value="mccoy">McCoy</option>
+                            <option value="other">Other/Neutral</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="search-results" class="search-results">
+                <p class="results-message">Enter a search term above to find historical materials.</p>
+            </div>
+        </section>
+        
+        <section class="bg-light py-lg">
+            <div class="container">
+                <h2 class="mb-md">Featured Collections</h2>
+                <p class="lead">Explore our curated collections of historical materials on key aspects of the Hatfield-McCoy feud.</p>
+                
+                <div class="collections-grid">
+                    <div class="collection-card">
+                        <img src="../../images/original-feud-collection.jpg" alt="Original Feud Collection" class="collection-image">
+                        <div class="collection-content">
+                            <h3>Original Feud (1863-1891)</h3>
+                            <p>Comprehensive collection of primary sources, biographies, and analysis of the original feud period, including court documents, newspaper articles, and family correspondence.</p>
+                            <a href="../../pages/timeline/index.html#original-feud" class="btn-text">Explore Collection</a>
+                        </div>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <img src="../../images/mid-century-collection.jpg" alt="Mid-Century Legacy Collection" class="collection-image">
+                        <div class="collection-content">
+                            <h3>Mid-Century Legacy (1940s-1950s)</h3>
+                            <p>Materials documenting the reconciliation and cooperation between the families during World War II and the post-war period, including the 1944 Life magazine article featuring Shirley Hatfield and Frankie McCoy.</p>
+                            <a href="../../pages/timeline/index.html#mid-century" class="btn-text">Explore Collection</a>
+                        </div>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <img src="../../images/key-figures-collection.jpg" alt="Key Figures Collection" class="collection-image">
+                        <div class="collection-content">
+                            <h3>Key Figures</h3>
+                            <p>Detailed biographies and primary sources related to the central figures in the feud, including "Devil Anse" Hatfield, Randolph McCoy, and other family members who played significant roles.</p>
+                            <a href="../../pages/people/index.html" class="btn-text">Explore Collection</a>
+                        </div>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <img src="../../images/locations-collection.jpg" alt="Locations Collection" class="collection-image">
+                        <div class="collection-content">
+                            <h3>Geographic Context</h3>
+                            <p>Maps, photographs, and descriptions of key locations in the feud, including family homesteads, battle sites, and courthouses where legal proceedings took place.</p>
+                            <a href="../../pages/locations/index.html" class="btn-text">Explore Collection</a>
+                        </div>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <img src="../../images/media-collection.jpg" alt="Media Coverage Collection" class="collection-image">
+                        <div class="collection-content">
+                            <h3>Media Coverage</h3>
+                            <p>Newspaper articles, magazine features, and other media coverage of the feud from the 1880s through the mid-20th century, showing how the story was presented to the public.</p>
+                            <a href="../../pages/primary-sources/index.html#media" class="btn-text">Explore Collection</a>
+                        </div>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <img src="../../images/cultural-impact-collection.jpg" alt="Cultural Impact Collection" class="collection-image">
+                        <div class="collection-content">
+                            <h3>Cultural Impact</h3>
+                            <p>Materials documenting the feud's influence on American culture, including books, films, television programs, and tourism developments from the late 19th century to the present.</p>
+                            <a href="../../pages/analysis/index.html#cultural-impact" class="btn-text">Explore Collection</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container my-lg">
+            <h2 class="mb-md">Recent Additions</h2>
+            <div class="recent-additions-grid">
+                <div class="recent-item">
+                    <span class="recent-date">April 2025</span>
+                    <h3 class="recent-title">Newly Discovered Photographs</h3>
+                    <p>A collection of previously unpublished photographs from the 1880s showing Hatfield and McCoy family members has been added to the Gallery section.</p>
+                    <a href="../../pages/gallery/index.html#new-photos" class="btn-text">View Photographs</a>
+                </div>
+                
+                <div class="recent-item">
+                    <span class="recent-date">March 2025</span>
+                    <h3 class="recent-title">Interactive Timeline Update</h3>
+                    <p>Our dual timeline feature has been enhanced with additional events and improved filtering capabilities for better exploration of the feud chronology.</p>
+                    <a href="../../pages/timeline/index.html" class="btn-text">Explore Timeline</a>
+                </div>
+                
+                <div class="recent-item">
+                    <span class="recent-date">February 2025</span>
+                    <h3 class="recent-title">Oral History Transcripts</h3>
+                    <p>Transcripts of interviews with descendants of both families conducted in the 1950s have been added to the Family Stories section.</p>
+                    <a href="../../pages/family-stories/index.html#oral-histories" class="btn-text">Read Transcripts</a>
+                </div>
+                
+                <div class="recent-item">
+                    <span class="recent-date">January 2025</span>
+                    <h3 class="recent-title">Map Enhancement</h3>
+                    <p>The interactive maps in the Locations section now include additional historical sites and improved navigation features.</p>
+                    <a href="../../pages/locations/index.html" class="btn-text">View Maps</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="bg-light py-lg">
+            <div class="container">
+                <h2 class="text-center mb-md">How to Use This Resource</h2>
+                <div class="grid">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <img src="../../images/icon-search.png" alt="Search Icon">
+                            </div>
+                            <h3>Search</h3>
+                            <p>Use the Advanced Search feature to find specific information about people, events, locations, or documents related to the feud.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <img src="../../images/icon-explore.png" alt="Explore Icon">
+                            </div>
+                            <h3>Explore</h3>
+                            <p>Browse through our curated collections to discover different aspects of the feud's history and legacy.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <img src="../../images/icon-interact.png" alt="Interact Icon">
+                            </div>
+                            <h3>Interact</h3>
+                            <p>Engage with our interactive features, including timelines, maps, and filtering tools to visualize the feud's history.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <img src="../../images/icon-cite.png" alt="Cite Icon">
+                            </div>
+                            <h3>Cite</h3>
+                            <p>Use our Citation Generator to create proper citations for any materials you reference in your own work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 class="footer-heading">About</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../../pages/about/index.html">About this Project</a></li>
+                        <li class="footer-link"><a href="../../pages/bibliography.html">Bibliography</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../../pages/timeline/index.html">Timeline</a></li>
+                        <li class="footer-link"><a href="../../pages/people/index.html">People</a></li>
+                        <li class="footer-link"><a href="../../pages/locations/index.html">Locations</a></li>
+                        <li class="footer-link"><a href="../../pages/primary-sources/index.html">Primary Sources</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../../pages/gallery/index.html">Gallery</a></li>
+                        <li class="footer-link"><a href="../../pages/analysis/index.html">Analysis</a></li>
+                        <li class="footer-link"><a href="../../pages/family-stories/index.html">Family Stories</a></li>
+                        <li class="footer-link"><a href="../../pages/citation-generator.html">Citation Generator</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../../pages/contact/index.html">Contact Us</a></li>
+                        <li class="footer-link"><a href="../../pages/resources/index.html">Additional Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>NotLizAI: committed to integrity and accuracy</p>
+                <p>&copy; 2025 Hatfield-McCoy Feud Research Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/image-generator.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search functionality
+            const searchButton = document.getElementById('search-button');
+            const searchInput = document.getElementById('search-input');
+            const searchResults = document.getElementById('search-results');
+            const contentTypeSelect = document.getElementById('content-type');
+            const timePeriodSelect = document.getElementById('time-period');
+            const familySelect = document.getElementById('family');
+            
+            // Sample search results data (would be replaced with actual data in a production environment)
+            const sampleResults = [
+                {
+                    title: "Devil Anse Hatfield",
+                    type: "people",
+                    period: "1863-1890",
+                    family: "hatfield",
+                    description: "Leader of the Hatfield family during the feud. Born William Anderson Hatfield in 1839.",
+                    link: "../../pages/people/index.html#devil-anse"
+                },
+                {
+                    title: "Randolph McCoy",
+                    type: "people",
+                    period: "1863-1890",
+                    family: "mccoy",
+                    description: "Leader of the McCoy family during the feud. Born in 1825 in Kentucky.",
+                    link: "../../pages/people/index.html#randolph-mccoy"
+                },
+                {
+                    title: "New Year's Night Massacre",
+                    type: "events",
+                    period: "1883-1890",
+                    family: "both",
+                    description: "January 1, 1888 attack on the McCoy home that resulted in the deaths of Alifair and Calvin McCoy.",
+                    link: "../../pages/timeline/index.html#new-years-massacre"
+                },
+                {
+                    title: "Pawpaw Creek Execution Site",
+                    type: "locations",
+                    period: "1871-1882",
+                    family: "both",
+                    description: "Location where three McCoy brothers were executed by the Hatfields in 1882.",
+                    link: "../../pages/locations/index.html#pawpaw-creek"
+                },
+                {
+                    title: "Louisville Courier-Journal Article (1888)",
+                    type: "documents",
+                    period: "1883-1890",
+                    family: "neutral",
+                    description: "Newspaper coverage of the New Year's Night Massacre that brought national attention to the feud.",
+                    link: "../../pages/primary-sources/index.html#courier-journal"
+                },
+                {
+                    title: "Hatfield Family Photograph (1888)",
+                    type: "photos",
+                    period: "1883-1890",
+                    family: "hatfield",
+                    description: "Rare group photograph of Devil Anse Hatfield and his sons taken during the height of the feud.",
+                    link: "../../pages/gallery/index.html#hatfield-family-photo"
+                }
+            ];
+            
+            searchButton.addEventListener('click', function() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const contentType = contentTypeSelect.value;
+                const timePeriod = timePeriodSelect.value;
+                const family = familySelect.value;
+                
+                if (searchTerm.length < 2) {
+                    searchResults.innerHTML = '<p class="results-message">Please enter at least 2 characters to search.</p>';
+                    return;
+                }
+                
+                // Filter results based on search term and filters
+                const filteredResults = sampleResults.filter(result => {
+                    const matchesTerm = result.title.toLowerCase().includes(searchTerm) || 
+                                       result.description.toLowerCase().includes(searchTerm);
+                    const matchesType = contentType === 'all' || result.type === contentType;
+                    const matchesPeriod = timePeriod === 'all' || result.period === timePeriod;
+                    const matchesFamily = family === 'all' || result.family === family || 
+                                         (family === 'other' && result.family === 'neutral');
+                    
+                    return matchesTerm && matchesType && matchesPeriod && matchesFamily;
+                });
+                
+                // Display results
+                if (filteredResults.length === 0) {
+                    searchResults.innerHTML = '<p class="results-message">No results found. Try adjusting your search terms or filters.</p>';
+                } else {
+                    let resultsHTML = `<h3>Search Results (${filteredResults.length})</h3><div class="results-list">`;
+                    
+                    filteredResults.forEach(result => {
+                        resultsHTML += `
+                            <div class="result-item">
+                                <h4 class="result-title"><a href="${result.link}">${result.title}</a></h4>
+                                <div class="result-meta">
+                                    <span class="result-type">${result.type.charAt(0).toUpperCase() + result.type.slice(1)}</span>
+                                    <span class="result-period">${result.period}</span>
+                                    <span class="result-family">${result.family.charAt(0).toUpperCase() + result.family.slice(1)}</span>
+                                </div>
+                                <p class="result-description">${result.description}</p>
+                                <a href="${result.link}" class="btn-text">View Details</a>
+                            </div>
+                        `;
+                    });
+                    
+                    resultsHTML += '</div>';
+                    searchResults.innerHTML = resultsHTML;
+                }
+            });
+            
+            // Allow search on Enter key press
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchButton.click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

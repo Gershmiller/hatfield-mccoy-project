@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People - Hatfield-McCoy Feud</title>
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="../../index.html" class="site-title">Hatfield-McCoy Feud</a>
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="../research-portal/index.html" class="nav-link">Research Portal</a></li>
+                    <li><a href="../timeline/index.html" class="nav-link">Timeline</a></li>
+                    <li><a href="../people/index.html" class="nav-link active">People</a></li>
+                    <li><a href="../locations/index.html" class="nav-link">Locations</a></li>
+                    <li><a href="../primary-sources/index.html" class="nav-link">Primary Sources</a></li>
+                    <li><a href="../gallery/index.html" class="nav-link">Gallery</a></li>
+                    <li><a href="../analysis/index.html" class="nav-link">Analysis</a></li>
+                    <li><a href="../family-stories/index.html" class="nav-link">Family Stories</a></li>
+                    <li><a href="../resources/index.html" class="nav-link">Resources</a></li>
+                    <li><a href="../citation-generator.html" class="nav-link">Citation Generator</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero bg-light">
+            <div class="container">
+                <h1 class="hero-title">Key Figures of the Feud</h1>
+                <p class="hero-subtitle">Explore the lives and roles of the central figures in the Hatfield-McCoy feud, from family patriarchs to peripheral characters who influenced the conflict.</p>
+            </div>
+        </section>
+
+        <section class="container my-lg">
+            <div class="family-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-family="all">All Figures</button>
+                    <button class="tab-btn" data-family="hatfield">Hatfield Family</button>
+                    <button class="tab-btn" data-family="mccoy">McCoy Family</button>
+                    <button class="tab-btn" data-family="other">Other Figures</button>
+                </div>
+            </div>
+
+            <div class="family-leaders my-md">
+                <h2 class="section-title">Family Patriarchs</h2>
+                <div class="grid-2">
+                    <div class="profile-card">
+                        <img src="../../images/devil-anse-hatfield.jpg" alt="William Anderson 'Devil Anse' Hatfield" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">William Anderson "Devil Anse" Hatfield</h3>
+                            <p class="profile-role">Hatfield Family Patriarch (1839-1921)</p>
+                            <p class="profile-bio">The leader of the Hatfield clan during the feud, Devil Anse was a timber merchant and former Confederate captain. Known for his fierce temperament and skilled marksmanship, he eventually found religion later in life and was baptized at age 73.</p>
+                            <div class="profile-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Born</span>
+                                    <span class="detail-value">September 9, 1839</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Died</span>
+                                    <span class="detail-value">January 6, 1921</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Spouse</span>
+                                    <span class="detail-value">Levicy Chafin</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Children</span>
+                                    <span class="detail-value">13</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="../../images/randolph-mccoy.jpg" alt="Randolph 'Ole Ran'l' McCoy" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Randolph "Ole Ran'l" McCoy</h3>
+                            <p class="profile-role">McCoy Family Patriarch (1825-1914)</p>
+                            <p class="profile-bio">The leader of the McCoy clan, Randolph was a farmer and ferry operator. He lost five of his children to the violence of the feud, including three sons who were tied to pawpaw bushes and executed by the Hatfields in 1882.</p>
+                            <div class="profile-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Born</span>
+                                    <span class="detail-value">October 30, 1825</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Died</span>
+                                    <span class="detail-value">March 28, 1914</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Spouse</span>
+                                    <span class="detail-value">Sarah "Sally" McCoy</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Children</span>
+                                    <span class="detail-value">16</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="key-figures my-md">
+                <h2 class="section-title">Key Hatfield Family Members</h2>
+                <div class="grid-3">
+                    <div class="profile-card">
+                        <img src="../../images/cap-hatfield.jpg" alt="William Anderson 'Cap' Hatfield II" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">William Anderson "Cap" Hatfield II</h3>
+                            <p class="profile-role">Second son of Devil Anse (1864-1930)</p>
+                            <p class="profile-bio">Known as the most dangerous of Devil Anse's sons, Cap was a skilled marksman who participated in many of the violent episodes of the feud.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="../../images/johnse-hatfield.jpg" alt="Johnson 'Johnse' Hatfield" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Johnson "Johnse" Hatfield</h3>
+                            <p class="profile-role">Eldest son of Devil Anse (1862-1922)</p>
+                            <p class="profile-bio">His romance with Roseanna McCoy in 1880 is often cited as one of the catalysts for the escalation of the feud. Later married Roseanna's cousin Nancy McCoy.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="../../images/levicy-hatfield.jpg" alt="Levicy Chafin Hatfield" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Levicy Chafin Hatfield</h3>
+                            <p class="profile-role">Wife of Devil Anse (1842-1929)</p>
+                            <p class="profile-bio">The matriarch of the Hatfield family who stood by her husband throughout the feud while raising their 13 children.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="../../images/ellison-hatfield.jpg" alt="Ellison Hatfield" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Ellison Hatfield</h3>
+                            <p class="profile-role">Brother of Devil Anse (1841-1882)</p>
+                            <p class="profile-bio">His murder by three McCoy brothers during an election day dispute in 1882 led to their subsequent execution by the Hatfields, dramatically escalating the feud.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="../../images/cotton-top-mounts.jpg" alt="Ellison 'Cotton Top' Mounts" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Ellison "Cotton Top" Mounts</h3>
+                            <p class="profile-role">Illegitimate son of Ellison Hatfield (1865-1890)</p>
+                            <p class="profile-bio">Known for his white-blond hair and diminished mental capacity, he was executed by hanging for his role in the murder of Alifair McCoy during the New Year's Night Raid.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="../../images/jim-vance.jpg" alt="Jim Vance" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Jim Vance</h3>
+                            <p class="profile-role">Uncle of Devil Anse (1832-1888)</p>
+                            <p class="profile-bio">A violent and ruthless man who was one of the leaders of the New Year's Night Raid on the McCoy cabin. He was later killed by Frank Phillips in 1888.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="key-figures my-md">
+                <h2 class="section-title">Key McCoy Family Members</h2>
+                <div class="grid-3">
+                    <div class="profile-card">
+                        <img src="../../images/sarah-mccoy.jpg" alt="Sarah 'Sally' McCoy" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Sarah "Sally" McCoy</h3>
+                            <p class="profile-role">Wife of Randolph McCoy (1829-1890)</p>
+                            <p class="profile-bio">The matriarch of the McCoy family who was severely beaten during the New Year's Night Raid of 1888 and never fully recovered from her injuries.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="../../images/roseanna-mccoy.jpg" alt="Roseanna McCoy" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Roseanna McCoy</h3>
+                            <p class="profile-role">Daughter of Randolph McCoy (1859-1889)</p>
+                            <p class="profile-bio">Her romance with Johnse Hatfield in 1880 is often romanticized as a "Romeo and Juliet" story. After being abandoned by Johnse while pregnant, she died of a broken heart at age 29.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="../../images/tolbert-mccoy.jpg" alt="Tolbert McCoy" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Tolbert McCoy</h3>
+                            <p class="profile-role">Son of Randolph McCoy (1854-1882)</p>
+                            <p class="profile-bio">One of the three McCoy brothers who killed Ellison Hatfield in 1882 and were subsequently executed by the Hatfields while tied to pawpaw bushes.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="../../images/pharmer-mccoy.jpg" alt="Pharmer McCoy" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Pharmer McCoy</h3>
+                            <p class="profile-role">Son of Randolph McCoy (1863-1882)</p>
+                            <p class="profile-bio">One of the three McCoy brothers executed by the Hatfields in 1882 for the killing of Ellison Hatfield during an election day dispute.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="../../images/bud-mccoy.jpg" alt="Randolph 'Bud' McCoy Jr." class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Randolph "Bud" McCoy Jr.</h3>
+                            <p class="profile-role">Son of Randolph McCoy (1864-1882)</p>
+                            <p class="profile-bio">The youngest of the three McCoy brothers executed by the Hatfields in 1882, he was only 17 years old at the time of his death.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="../../images/alifair-mccoy.jpg" alt="Alifair McCoy" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Alifair McCoy</h3>
+                            <p class="profile-role">Daughter of Randolph McCoy (1858-1888)</p>
+                            <p class="profile-bio">Shot and killed by Cap Hatfield or Cotton Top Mounts during the New Year's Night Raid on the McCoy cabin in 1888.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="key-figures my-md">
+                <h2 class="section-title">Other Key Figures</h2>
+                <div class="grid-3">
+                    <div class="profile-card">
+                        <img src="../../images/perry-cline.jpg" alt="Perry Cline" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Perry Cline</h3>
+                            <p class="profile-role">Attorney and McCoy ally (1849-1891)</p>
+                            <p class="profile-bio">A lawyer and politician who lost a land dispute to Devil Anse Hatfield. He later used his political connections to bring in bounty hunters against the Hatfields.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="../../images/frank-phillips.jpg" alt="Frank Phillips" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Frank Phillips</h3>
+                            <p class="profile-role">Bounty Hunter (1862-1898)</p>
+                            <p class="profile-bio">Also known as "Bad Frank," he was a deputy and bounty hunter who captured several Hatfields for trial in Kentucky. He killed Jim Vance and later married Nancy McCoy after her divorce from Johnse Hatfield.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="../../images/wall-hatfield.jpg" alt="Wall Hatfield" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Wall Hatfield</h3>
+                            <p class="profile-role">Brother of Devil Anse (1835-1890)</p>
+                            <p class="profile-bio">A more moderate member of the Hatfield family who served as a justice of the peace. Despite claiming innocence, he was convicted and died in prison for his alleged role in the feud.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="../../images/nancy-mccoy.jpg" alt="Nancy McCoy" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Nancy McCoy</h3>
+                            <p class="profile-role">Cousin of Roseanna McCoy (1859-1927)</p>
+                            <p class="profile-bio">Married Johnse Hatfield in 1881 after his relationship with her cousin Roseanna ended. She later divorced him and married Frank Phillips.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="../../images/valentine-hatfield.jpg" alt="Valentine 'Uncle Wall' Hatfield" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Valentine "Uncle Wall" Hatfield</h3>
+                            <p class="profile-role">Brother of Devil Anse (1834-1890)</p>
+                            <p class="profile-bio">A justice of the peace who tried to remain neutral during the feud but was eventually arrested, convicted, and died in prison.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="../../images/bill-staton.jpg" alt="Bill Staton" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Bill Staton</h3>
+                            <p class="profile-role">Related to both families (d. 1880)</p>
+                            <p class="profile-bio">Married to a Hatfield and brother-in-law to two McCoys, he was killed by Sam and Paris McCoy in 1880 following his testimony in the pig dispute trial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mid-century-figures my-md">
+                <h2 class="section-title">Mid-Century Legacy Figures (1940s-1950s)</h2>
+                <div class="grid-2">
+                    <div class="profile-card">
+                        <img src="../../images/shirley-hatfield.jpg" alt="Shirley Hatfield" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Shirley Hatfield</h3>
+                            <p class="profile-role">Great-granddaughter of Devil Anse (1922-2010)</p>
+                            <p class="profile-bio">Featured in the 1944 Life magazine article working alongside Frankie McCoy in a uniform factory during World War II, symbolizing the reconciliation between the families.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <img src="../../images/frankie-mccoy.jpg" alt="Frankie McCoy" class="profile-image">
+                        <div class="profile-content">
+                            <h3 class="profile-name">Frankie McCoy</h3>
+                            <p class="profile-role">Great-granddaughter of Randolph McCoy (1923-2008)</p>
+                            <p class="profile-bio">Worked alongside Shirley Hatfield during World War II, their cooperation symbolizing how the next generations had moved beyond the feud that divided their ancestors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 class="footer-heading">About</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../about/index.html">About this Project</a></li>
+                        <li class="footer-link"><a href="../bibliography.html">Bibliography</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../timeline/index.html">Timeline</a></li>
+                        <li class="footer-link"><a href="../people/index.html">People</a></li>
+                        <li class="footer-link"><a href="../locations/index.html">Locations</a></li>
+                        <li class="footer-link"><a href="../primary-sources/index.html">Primary Sources</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../gallery/index.html">Gallery</a></li>
+                        <li class="footer-link"><a href="../analysis/index.html">Analysis</a></li>
+                        <li class="footer-link"><a href="../family-stories/index.html">Family Stories</a></li>
+                        <li class="footer-link"><a href="../citation-generator.html">Citation Generator</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../contact/index.html">Contact Us</a></li>
+                        <li class="footer-link"><a href="../resources/index.html">Additional Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>NotLizAI: committed to integrity and accuracy</p>
+                <p>&copy; 2025 Hatfield-McCoy Feud Research Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/image-display.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Family tab functionality
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const profileCards = document.querySelectorAll('.profile-card');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active button
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const family = this.getAttribute('data-family');
+                    
+                    // Show/hide profiles based on family
+                    profileCards.forEach(card => {
+                        const profileName = card.querySelector('.profile-name').textContent.toLowerCase();
+                        const profileRole = card.querySelector('.profile-role').textContent.toLowerCase();
+                        
+                        if (family === 'all') {
+                            card.style.display = 'block';
+                        } else if (family === 'hatfield' && (profileName.includes('hatfield') || profileRole.includes('hatfield'))) {
+                            card.style.display = 'block';
+                        } else if (family === 'mccoy' && (profileName.includes('mccoy') || profileRole.includes('mccoy'))) {
+                            card.style.display = 'block';
+                        } else if (family === 'other' && !profileName.includes('hatfield') && !profileName.includes('mccoy') && !profileRole.includes('hatfield') && !profileRole.includes('mccoy')) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

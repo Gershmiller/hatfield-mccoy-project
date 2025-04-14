@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citation Generator - Hatfield-McCoy Feud</title>
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/citation.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="../index.html" class="site-title">Hatfield-McCoy Feud</a>
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="../pages/research-portal/index.html" class="nav-link">Research Portal</a></li>
+                    <li><a href="../pages/timeline/index.html" class="nav-link">Timeline</a></li>
+                    <li><a href="../pages/people/index.html" class="nav-link">People</a></li>
+                    <li><a href="../pages/locations/index.html" class="nav-link">Locations</a></li>
+                    <li><a href="../pages/primary-sources/index.html" class="nav-link">Primary Sources</a></li>
+                    <li><a href="../pages/gallery/index.html" class="nav-link">Gallery</a></li>
+                    <li><a href="../pages/analysis/index.html" class="nav-link">Analysis</a></li>
+                    <li><a href="../pages/family-stories/index.html" class="nav-link">Family Stories</a></li>
+                    <li><a href="../pages/resources/index.html" class="nav-link">Resources</a></li>
+                    <li><a href="../pages/citation-generator.html" class="nav-link active">Citation Generator</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero bg-light">
+            <div class="container">
+                <h1 class="hero-title">Citation Generator</h1>
+                <p class="hero-subtitle">Create properly formatted citations for materials from this website and other sources related to the Hatfield-McCoy feud.</p>
+            </div>
+        </section>
+
+        <section class="container my-lg">
+            <div class="citation-generator">
+                <div class="citation-form">
+                    <h2>Generate a Citation</h2>
+                    <p>Fill out the form below to create a properly formatted citation for your research or creative project.</p>
+                    
+                    <form id="citation-form">
+                        <div class="form-group">
+                            <label for="source-type">Source Type:</label>
+                            <select id="source-type" required>
+                                <option value="">Select a source type</option>
+                                <option value="book">Book</option>
+                                <option value="article">Journal/Magazine Article</option>
+                                <option value="newspaper">Newspaper Article</option>
+                                <option value="website">Website</option>
+                                <option value="document">Primary Document</option>
+                                <option value="image">Photograph/Image</option>
+                                <option value="interview">Interview/Oral History</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="citation-style">Citation Style:</label>
+                            <select id="citation-style" required>
+                                <option value="mla">MLA (9th Edition)</option>
+                                <option value="apa">APA (7th Edition)</option>
+                                <option value="chicago">Chicago (17th Edition)</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Dynamic fields will be added here based on source type -->
+                        <div id="dynamic-fields"></div>
+                        
+                        <button type="submit" class="btn">Generate Citation</button>
+                    </form>
+                </div>
+                
+                <div class="citation-result">
+                    <h2>Your Citation</h2>
+                    <div id="citation-output" class="citation-output">
+                        <p class="placeholder-text">Your formatted citation will appear here.</p>
+                    </div>
+                    <div class="citation-actions">
+                        <button id="copy-citation" class="btn-sm">Copy to Clipboard</button>
+                        <button id="download-citation" class="btn-sm">Download as Text</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="bg-light py-lg">
+            <div class="container">
+                <h2 class="section-title">Citation Guide</h2>
+                
+                <div class="citation-guide">
+                    <div class="guide-section">
+                        <h3>MLA Format (9th Edition)</h3>
+                        <p>The Modern Language Association (MLA) format is commonly used for literature, arts, and humanities.</p>
+                        
+                        <h4>Basic Format for Books:</h4>
+                        <p class="example">Author's Last Name, First Name. <em>Title of Book</em>. Publisher, Publication Date.</p>
+                        
+                        <h4>Example:</h4>
+                        <p class="example">Waller, Altina L. <em>Feud: Hatfields, McCoys, and Social Change in Appalachia, 1860-1900</em>. University of North Carolina Press, 1988.</p>
+                    </div>
+                    
+                    <div class="guide-section">
+                        <h3>APA Format (7th Edition)</h3>
+                        <p>The American Psychological Association (APA) format is commonly used for social sciences.</p>
+                        
+                        <h4>Basic Format for Books:</h4>
+                        <p class="example">Author's Last Name, First Initial. Middle Initial. (Publication Year). <em>Title of book: Subtitle</em>. Publisher.</p>
+                        
+                        <h4>Example:</h4>
+                        <p class="example">Waller, A. L. (1988). <em>Feud: Hatfields, McCoys, and social change in Appalachia, 1860-1900</em>. University of North Carolina Press.</p>
+                    </div>
+                    
+                    <div class="guide-section">
+                        <h3>Chicago Format (17th Edition)</h3>
+                        <p>The Chicago Manual of Style is commonly used for history and some humanities disciplines.</p>
+                        
+                        <h4>Basic Format for Books (Notes-Bibliography):</h4>
+                        <p class="example">Author's Last Name, First Name. <em>Title of Book</em>. Place of Publication: Publisher, Publication Year.</p>
+                        
+                        <h4>Example:</h4>
+                        <p class="example">Waller, Altina L. <em>Feud: Hatfields, McCoys, and Social Change in Appalachia, 1860-1900</em>. Chapel Hill: University of North Carolina Press, 1988.</p>
+                    </div>
+                </div>
+                
+                <div class="citation-tips">
+                    <h3>Tips for Citing Historical Sources</h3>
+                    <ul>
+                        <li>Always include as much information as possible about the source, including dates, page numbers, and publication details.</li>
+                        <li>For primary sources, include information about the archive or collection where the document is housed.</li>
+                        <li>When citing newspaper articles from the feud era, include the newspaper name, date, page number, and headline if available.</li>
+                        <li>For photographs, include the photographer's name (if known), the date, and the repository where the original is held.</li>
+                        <li>When citing content from this website, include the page title, website name, URL, and date accessed.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 class="footer-heading">About</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../pages/about/index.html">About this Project</a></li>
+                        <li class="footer-link"><a href="../pages/bibliography.html">Bibliography</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../pages/timeline/index.html">Timeline</a></li>
+                        <li class="footer-link"><a href="../pages/people/index.html">People</a></li>
+                        <li class="footer-link"><a href="../pages/locations/index.html">Locations</a></li>
+                        <li class="footer-link"><a href="../pages/primary-sources/index.html">Primary Sources</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../pages/gallery/index.html">Gallery</a></li>
+                        <li class="footer-link"><a href="../pages/analysis/index.html">Analysis</a></li>
+                        <li class="footer-link"><a href="../pages/family-stories/index.html">Family Stories</a></li>
+                        <li class="footer-link"><a href="../pages/citation-generator.html">Citation Generator</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../pages/contact/index.html">Contact Us</a></li>
+                        <li class="footer-link"><a href="../pages/resources/index.html">Additional Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>NotLizAI: committed to integrity and accuracy</p>
+                <p>&copy; 2025 Hatfield-McCoy Feud Research Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/citation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sourceTypeSelect = document.getElementById('source-type');
+            const dynamicFields = document.getElementById('dynamic-fields');
+            const citationForm = document.getElementById('citation-form');
+            const citationOutput = document.getElementById('citation-output');
+            const copyButton = document.getElementById('copy-citation');
+            const downloadButton = document.getElementById('download-citation');
+            
+            // Define field sets for different source types
+            const fieldSets = {
+                book: [
+                    { id: 'author', label: 'Author(s)', type: 'text', required: true, placeholder: 'Last Name, First Name' },
+                    { id: 'title', label: 'Book Title', type: 'text', required: true },
+                    { id: 'publisher', label: 'Publisher', type: 'text', required: true },
+                    { id: 'year', label: 'Publication Year', type: 'number', required: true },
+                    { id: 'city', label: 'Publication City', type: 'text', required: false },
+                    { id: 'edition', label: 'Edition', type: 'text', required: false, placeholder: 'e.g., 2nd ed.' }
+                ],
+                article: [
+                    { id: 'author', label: 'Author(s)', type: 'text', required: true, placeholder: 'Last Name, First Name' },
+                    { id: 'article-title', label: 'Article Title', type: 'text', required: true },
+                    { id: 'journal-title', label: 'Journal/Magazine Title', type: 'text', required: true },
+                    { id: 'volume', label: 'Volume', type: 'text', required: false },
+                    { id: 'issue', label: 'Issue', type: 'text', required: false },
+                    { id: 'year', label: 'Publication Year', type: 'number', required: true },
+                    { id: 'pages', label: 'Page Range', type: 'text', required: false, placeholder: 'e.g., 45-67' }
+                ],
+                newspaper: [
+                    { id: 'author', label: 'Author(s)', type: 'text', required: false, placeholder: 'Last Name, First Name (if known)' },
+                    { id: 'article-title', label: 'Article Title', type: 'text', required: true },
+                    { id: 'newspaper-title', label: 'Newspaper Name', type: 'text', required: true },
+                    { id: 'date', label: 'Publication Date', type: 'date', required: true },
+                    { id: 'pages', label: 'Page Number(s)', type: 'text', required: false },
+                    { id: 'city', label: 'Publication City', type: 'text', required: false }
+                ],
+                website: [
+                    { id: 'author', label: 'Author/Creator', type: 'text', required: false, placeholder: 'Last Name, First Name (if known)' },
+                    { id: 'page-title', label: 'Page Title', type: 'text', required: true },
+                    { id: 'website-title', label: 'Website Name', type: 'text', required: true },
+                    { id: 'url', label: 'URL', type: 'url', required: true },
+                    { id: 'published-date', label: 'Publication Date', type: 'date', required: false },
+                    { id: 'accessed-date', label: 'Date Accessed', type: 'date', required: true }
+                ],
+                document: [
+                    { id: 'author', label: 'Author/Creator', type: 'text', required: false, placeholder: 'Last Name, First Name (if known)' },
+                    { id: 'document-title', label: 'Document Title', type: 'text', required: true },
+                    { id: 'date', label: 'Date Created', type: 'date', required: false },
+                    { id: 'collection', label: 'Collection/Archive', type: 'text', required: false },
+                    { id: 'repository', label: 'Repository', type: 'text', required: false },
+                    { id: 'location', label: 'Location', type: 'text', required: false },
+                    { id: 'identifier', label: 'Identifier/Call Number', type: 'text', required: false }
+                ],
+                image: [
+                    { id: 'creator', label: 'Photographer/Creator', type: 'text', required: false, placeholder: 'Last Name, First Name (if known)' },
+                    { id: 'title', label: 'Title/Description', type: 'text', required: true },
+                    { id: 'date', label: 'Date Created', type: 'date', required: false },
+                    { id: 'repository', label: 'Repository/Collection', type: 'text', required: false },
+                    { id: 'location', label: 'Location', type: 'text', required: false },
+                    { id: 'identifier', label: 'Identifier/Call Number', type: 'text', required: false }
+                ],
+                interview: [
+                    { id: 'interviewee', label: 'Person Interviewed', type: 'text', required: true, placeholder: 'Last Name, First Name' },
+                    { id: 'interviewer', label: 'Interviewer', type: 'text', required: false, placeholder: 'Last Name, First Name' },
+                    { id: 'interview-title', label: 'Interview Title', type: 'text', required: false },
+                    { id: 'date', label: 'Interview Date', type: 'date', required: true },
+                    { id: 'format', label: 'Format', type: 'text', required: false, placeholder: 'e.g., Telephone, Personal, Video' },
+                    { id: 'collection', label: 'Collection/Archive', type: 'text', required: false },
+                    { id: 'location', label: 'Location', type: 'text', required: false }
+                ]
+            };
+            
+            // Update form fields when source type changes
+            sourceTypeSelect.addEventListener('change', function() {
+                const sourceType = this.value;
+                dynamicFields.innerHTML = '';
+                
+                if (sourceType && fieldSets[sourceType]) {
+                    fieldSets[sourceType].forEach(field => {
+                        const formGroup = document.createElement('div');
+                        formGroup.className = 'form-group';
+                        
+                        const label = document.createElement('label');
+                        label.setAttribute('for', field.id);
+                        label.textContent = field.label + (field.required ? ' *' : '');
+                        
+                        const input = document.createElement('input');
+                        input.setAttribute('type', field.type);
+                        input.setAttribute('id', field.id);
+                        input.setAttribute('name', field.id);
+                        
+                        if (field.required) {
+                            input.setAttribute('required', 'required');
+                        }
+                        
+                        if (field.placeholder) {
+                            input.setAttribute('placeholder', field.placeholder);
+                        }
+                        
+                        formGroup.appendChild(label);
+                        formGroup.appendChild(input);
+                        dynamicFields.appendChild(formGroup);
+                    });
+                }
+            });
+            
+            // Generate citation when form is submitted
+            citationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const sourceType = sourceTypeSelect.value;
+                const citationStyle = document.getElementById('citation-style').value;
+                
+                // Collect form data
+                const formData = {};
+                fieldSets[sourceType].forEach(field => {
+                    const input = document.getElementById(field.id);
+                    if (input) {
+                        formData[field.id] = input.value;
+                    }
+                });
+                
+                // Generate citation based on style and source type
+                let citation = generateCitation(sourceType, citationStyle, formData);
+                
+                // Display the citation
+                citationOutput.innerHTML = `<p class="generated-citation">${citation}</p>`;
+            });
+            
+            // Copy citation to clipboard
+            copyButton.addEventListener('click', function() {
+                const citationText = citationOutput.textContent;
+                if (citationText && citationText !== 'Your formatted citation will appear here.') {
+                    navigator.clipboard.writeText(citationText).then(() => {
+                        alert('Citation copied to clipboard!');
+                    }).catch(err => {
+                        console.error('Could not copy text: ', err);
+                    });
+                }
+            });
+            
+            // Download citation as text file
+            downloadButton.addEventListener('click', function() {
+                const citationText = citationOutput.textContent;
+                if (citationText && citationText !== 'Your formatted citation will appear here.') {
+                    const blob = new Blob([citationText], { type: 'text/plain' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'citation.txt';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                }
+            });
+            
+            // Function to generate citation based on style and source type
+            function generateCitation(sourceType, style, data) {
+                let citation = '';
+                
+                // MLA Style
+                if (style === 'mla') {
+                    switch (sourceType) {
+                        case 'book':
+                            citation = `${data.author}. <em>${data.title}</em>. `;
+                            if (data.edition) citation += `${data.edition}, `;
+                            if (data.city) citation += `${data.city}: `;
+                            citation += `${data.publisher}, ${data.year}.`;
+                            break;
+                        case 'article':
+                            citation = `${data.author}. "${data['article-title']}." <em>${data['journal-title']}</em>, `;
+                            if (data.volume) citation += `vol. ${data.volume}, `;
+                            if (data.issue) citation += `no. ${data.issue}, `;
+                            citation += `${data.year}`;
+                            if (data.pages) citation += `, pp. ${data.pages}`;
+                            citation += '.';
+                            break;
+                        case 'newspaper':
+                            citation = '';
+                            if (data.author) citation += `${data.author}. `;
+                            citation += `"${data['article-title']}." <em>${data['newspaper-title']}</em>, `;
+                            
+                            // Format date for MLA
+                            const date = new Date(data.date);
+                            const options = { day: 'numeric', month: 'long', year: 'numeric' };
+                            citation += date.toLocaleDateString('en-US', options);
+                            
+                            if (data.pages) citation += `, p. ${data.pages}`;
+                            citation += '.';
+                            break;
+                        // Add other source types for MLA
+                        default:
+                            citation = 'Citation format not available for this combination.';
+                    }
+                }
+                // APA Style
+                else if (style === 'apa') {
+                    switch (sourceType) {
+                        case 'book':
+                            // Convert author name to APA format (Last, F. M.)
+                            const authorParts = data.author.split(',');
+                            let apaAuthor = data.author;
+                            if (authorParts.length > 1) {
+                                const lastName = authorParts[0].trim();
+                                const firstNames = authorParts[1].trim().split(' ');
+                                const initials = firstNames.map(name => `${name.charAt(0)}.`).join(' ');
+                                apaAuthor = `${lastName}, ${initials}`;
+                            }
+                            
+                            citation = `${apaAuthor} (${data.year}). <em>${data.title}</em>`;
+                            if (data.edition) citation += ` (${data.edition})`;
+                            citation += '.';
+                            if (data.city) citation += ` ${data.city}:`;
+                            citation += ` ${data.publisher}.`;
+                            break;
+                        // Add other source types for APA
+                        default:
+                            citation = 'Citation format not available for this combination.';
+                    }
+                }
+                // Chicago Style
+                else if (style === 'chicago') {
+                    switch (sourceType) {
+                        case 'book':
+                            citation = `${data.author}. <em>${data.title}</em>. `;
+                            if (data.edition) citation += `${data.edition}. `;
+                            if (data.city) citation += `${data.city}: `;
+                            citation += `${data.publisher}, ${data.year}.`;
+                            break;
+                        // Add other source types for Chicago
+                        default:
+                            citation = 'Citation format not available for this combination.';
+                    }
+                }
+                
+                return citation;
+            }
+        });
+    </script>
+</body>
+</html>

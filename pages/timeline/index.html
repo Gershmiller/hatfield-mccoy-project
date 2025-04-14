@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline - Hatfield-McCoy Feud Research Database</title>
+    <meta name="description" content="Interactive dual timeline of the Hatfield-McCoy feud, covering both the original 1863-1891 period and its mid-20th century legacy.">
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/timeline.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container flex justify-between items-center">
+            <a href="../../index.html" class="site-title">Hatfield-McCoy Feud</a>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="main-nav nav-menu">
+                    <li><a href="../research-portal/index.html" class="nav-link">Research Portal</a></li>
+                    <li><a href="../timeline/index.html" class="nav-link active">Timeline</a></li>
+                    <li><a href="../people/index.html" class="nav-link">People</a></li>
+                    <li><a href="../locations/index.html" class="nav-link">Locations</a></li>
+                    <li><a href="../primary-sources/index.html" class="nav-link">Primary Sources</a></li>
+                    <li><a href="../gallery/index.html" class="nav-link">Gallery</a></li>
+                    <li><a href="../analysis/index.html" class="nav-link">Analysis</a></li>
+                    <li><a href="../family-stories/index.html" class="nav-link">Family Stories</a></li>
+                    <li><a href="../resources/index.html" class="nav-link">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-xl">
+        <section class="mb-xl">
+            <h1>Interactive Timeline</h1>
+            <p>Explore the dual timeline of the Hatfield-McCoy feud, covering both the original feud period (1863-1891) and its cultural legacy through the mid-20th century (1940s-1950s). Use the filters to focus on specific aspects of the feud or toggle between time periods.</p>
+        </section>
+
+        <!-- Timeline Controls -->
+        <section class="timeline-controls mb-lg">
+            <div class="timeline-period-toggle">
+                <button class="period-btn active" data-period="original">Original Feud (1863-1891)</button>
+                <button class="period-btn" data-period="legacy">Mid-Century Legacy (1940s-1950s)</button>
+                <button class="period-btn" data-period="both">Show Both Periods</button>
+            </div>
+            <div class="timeline-filters">
+                <div class="filter-group">
+                    <label for="filter-family" class="filter-label">Family:</label>
+                    <select id="filter-family" class="filter-select">
+                        <option value="all">All</option>
+                        <option value="hatfield">Hatfield</option>
+                        <option value="mccoy">McCoy</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filter-type" class="filter-label">Event Type:</label>
+                    <select id="filter-type" class="filter-select">
+                        <option value="all">All Events</option>
+                        <option value="conflict">Conflicts</option>
+                        <option value="legal">Legal Proceedings</option>
+                        <option value="personal">Personal Events</option>
+                        <option value="cultural">Cultural Impact</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filter-significance" class="filter-label">Significance:</label>
+                    <select id="filter-significance" class="filter-select">
+                        <option value="all">All</option>
+                        <option value="major">Major Events</option>
+                        <option value="minor">Minor Events</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Visualization -->
+        <section class="timeline-visualization mb-xl">
+            <div class="timeline-container">
+                <!-- Original Feud Timeline (1863-1891) -->
+                <div class="timeline-period active" id="original-feud-timeline">
+                    <div class="timeline-header">
+                        <h2>Original Feud Period (1863-1891)</h2>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-event" data-family="both" data-type="conflict" data-significance="major">
+                            <div class="timeline-date">1863</div>
+                            <div class="timeline-content">
+                                <h3>Civil War Service</h3>
+                                <p>Asa Harmon McCoy joins the Union Army during the Civil War, while Devil Anse Hatfield forms a Confederate guerrilla group called the "Logan Wildcats."</p>
+                                <div class="timeline-details">
+                                    <a href="#" class="btn-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-event" data-family="mccoy" data-type="conflict" data-significance="major">
+                            <div class="timeline-date">January 1865</div>
+                            <div class="timeline-content">
+                                <h3>Murder of Asa Harmon McCoy</h3>
+                                <p>Asa Harmon McCoy is murdered after returning home from Union Army service. While Devil Anse Hatfield is suspected, the murder is likely committed by his uncle Jim Vance.</p>
+                                <div class="timeline-details">
+                                    <a href="#" class="btn-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-event" data-family="both" data-type="conflict" data-significance="major">
+                            <div class="timeline-date">1878</div>
+                            <div class="timeline-content">
+                                <h3>Dispute Over Floyd Hatfield's Pig</h3>
+                                <p>Randolph McCoy accuses Floyd Hatfield of stealing his hog, leading to a trial where Bill Staton (related to both families) testifies in favor of the Hatfields.</p>
+                                <div class="timeline-details">
+                                    <a href="#" class="btn-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-event" data-family="both" data-type="personal" data-significance="major">
+                            <div class="timeline-date">1880</div>
+                            <div class="timeline-content">
+                                <h3>Romance Between Roseanna McCoy and Johnse Hatfield</h3>
+                                <p>Roseanna McCoy and Johnse Hatfield begin a relationship at an election day gathering, with Roseanna leaving her family to live with the Hatfields.</p>
+                                <div class="timeline-details">
+                                    <a href="#" class="btn-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-event" data-family="both" data-type="conflict" data-significance="major">
+                            <div class="timeline-date">August 1882</div>
+                            <div class="timeline-content">
+                                <h3>Election Day Fight</h3>
+                                <p>Ellison Hatfield is stabbed 26 times and shot by three McCoy brothers (Tolbert, Pharmer, and Bud) during an election day dispute.</p>
+                                <div class="timeline-details">
+                                    <a href="#" class="btn-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-event" data-family="mccoy" data-type="conflict" data-significance="major">
+                            <div class="timeline-date">August 9, 1882</div>
+                            <div class="timeline-content">
+                                <h3>Execution of McCoy Brothers</h3>
+                                <p>After Ellison Hatfield dies from his wounds, Devil Anse Hatfield and his men tie the three McCoy brothers to pawpaw bushes and execute them by firing squad.</p>
+                                <div class="timeline-details">
+                                    <a href="#" class="btn-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-event" data-family="both" data-type="legal" data-significance="major">
+                            <div class="timeline-date">1887-1888</div>
+                            <div class="timeline-content">
+                                <h3>Legal Battle Between Kentucky and West Virginia</h3>
+                                <p>Kentucky Governor Simon Buckner requests extradition of Hatfields to Kentucky. West Virginia Governor E. Willis Wilson refuses, leading to a legal battle that reaches the U.S. Supreme Court.</p>
+                                <div class="timeline-details">
+                                    <a href="#" class="btn-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-event" data-family="hatfield" data-type="conflict" data-significance="major">
+                            <div class="timeline-date">January 1, 1888</div>
+                            <div class="timeline-content">
+                                <h3>New Year's Night Massacre</h3>
+                                <p>Jim Vance leads a Hatfield party in an attack on the McCoy cabin, killing Calvin and Alifair McCoy and severely beating Sarah McCoy. The cabin is set on fire.</p>
+                                <div class="timeline-details">
+                                    <a href="#" class="btn-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-event" data-family="hatfield" data-type="legal" data-significance="major">
+                            <div class="timeline-date">1889-1890</div>
+                            <div class="timeline-content">
+                                <h3>Trials of the Hatfields</h3>
+                                <p>Nine Hatfields and their supporters are tried for the murder of the McCoy family members. Seven receive life imprisonment, and Ellison Mounts is sentenced to death.</p>
+                                <div class="timeline-details">
+                                    <a href="#" class="btn-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-event" data-family="hatfield" data-type="legal" data-significance="major">
+                            <div class="timeline-date">February 18, 1890</div>
+                            <div class="timeline-content">
+                                <h3>Execution of Ellison Mounts</h3>
+                                <p>Ellison Mounts is hanged in Pikeville, Kentucky, marking the last formal execution of the feud. His last words reportedly were "The Hatfields made me do it."</p>
+                                <div class="timeline-details">
+                                    <a href="#" class="btn-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mid-Century Legacy Timeline (1940s-1950s) -->
+                <div class="timeline-period" id="legacy-timeline">
+                    <div class="timeline-header">
+                        <h2>Mid-Century Legacy (1940s-1950s)</h2>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-event" data-family="both" data-type="cultural" data-significance="major">
+                            <div class="timeline-date">May 1944</div>
+                            <div class="timeline-content">
+                                <h3>Life Magazine Article</h3>
+                                <p>Life Magazine publishes "Hatfields and McCoys now fight together in the Army, work together in mines and factories in their oldtime feuding territory," featuring Shirley Hatfield and Frankie McCoy working together in a WWII uniform factory.</p>
+                                <div class="timeline-details">
+                                    <a href="#" class="btn-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-event" data-family="both" data-type="cultural" data-significance="major">
+                            <div class="timeline-date">1946</div>
+                            <div class="timeline-content">
+                                <h3>First Hatfield-McCoy Reunion</h3>
+                                <p>The first official reunion of the Hatfield and McCoy families is held, symbolizing reconciliation between the descendants of the feuding families.</p>
+                                <div class="timeline-details">
+                                    <a href="#" class="btn-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-event" data-family="both" data-type="cultural" data-significance="major">
+                            <div class="timeline-date">1949</div>
+                            <div class="timeline-content">
+                                <h3>Publication of "The Hatfields and the McCoys"</h3>
+                                <p>Virgil Carrington Jones publishes "The Hatfields and the McCoys," one of the first comprehensive historical accounts of the feud, bringing renewed national attention to the story.</p>
+                                <div class="timeline-details">
+                                    <a href="#" class="btn-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-event" data-family="both" data-type="cultural" data-significance="minor">
+                            <div class="timeline-date">1950</div>
+                            <div class="timeline-content">
+                                <h3>Warner Bros. "Hillbilly Hare" Released</h3>
+                                <p>Warner Bros. releases the Bugs Bunny cartoon "Hillbilly Hare," featuring feuding hillbilly brothers clearly inspired by the Hatfield-McCoy feud, popularizing the feud in American pop culture.</p>
+                                <div class="timeline-details">
+                                    <a href="#" class="btn-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-event" data-family="both" data-type="cultural" data-significance="minor">
+                            <div class="timeline-date">1951</div>
+                            <div class="timeline-content">
+                                <h3>"Comin' Round the Mountain" Film</h3>
+                                <p>Universal Pictures releases "Comin' Round the Mountain," a comedy film starring Abbott and Costello that features a fictional version of the Hatfield-McCoy feud.</p>
+                                <div class="timeline-details">
+                                    <a href="#" class="btn-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-event" data-family="both" data-type="cultural" data-significance="major">
+                            <div class="timeline-date">1955</div>
+                            <div class="timeline-content">
+                                <h3>CBS Television Dramatization</h3>
+                                <p>CBS airs a dramatized account of the feud on its "You Are There" historical reenactment series, bringing the story to television audiences across America.</p>
+                                <div class="timeline-details">
+                                    <a href="#" class="btn-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Details Modal -->
+        <div class="event-modal" id="event-details-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-header">
+                    <h2 id="modal-title">Event Title</h2>
+                    <p id="modal-date">Event Date</p>
+                </div>
+                <div class="modal-body">
+                    <div id="modal-description">
+                        <!-- Event description will be inserted here -->
+                    </div>
+                    <div class="modal-metadata">
+                        <div class="metadata-item">
+                            <span class="metadata-label">Family:</span>
+                            <span id="modal-family">Family</span>
+                        </div>
+                        <div class="metadata-item">
+                            <span class="metadata-label">Event Type:</span>
+                            <span id="modal-type">Type</span>
+                        </div>
+                        <div class="metadata-item">
+                            <span class="metadata-label">Location:</span>
+                            <span id="modal-location">Location</span>
+                        </div>
+                    </div>
+                    <div class="modal-sources">
+                        <h3>Sources:</h3>
+                        <ul id="modal-sources">
+                            <!-- Sources will be inserted here -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-navigation">
+                        <button id="prev-event" class="btn btn-secondary">Previous Event</button>
+                        <button id="next-event" class="btn btn-secondary">Next Event</button>
+                    </div>
+                    <button id="close-modal" class="btn btn-primary">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline Methodology -->
+        <section class="mb-xl">
+            <h2>Timeline Methodology</h2>
+            <div class="p-lg" style="background-color: var(--color-bg-ui); border-radius: var(--border-radius-md);">
+                <h3>How This Timeline Was Created</h3>
+                <p>This interactive timeline was developed using a rigorous historical methodology:</p>
+                <ul>
+                    <li>All events are verified through multiple primary and secondary sources</li>
+                    <li>Dates are presented as specifically as historical records allow</li>
+                    <li>When exact dates are unknown, we provide the most accurate timeframe possible</li>
+                    <li>Events are categorized by family involvement, type, and historical significance</li>
+                    <li>The dual timeline structure highlights both the original feud and its cultural legacy</li>
+                </ul>
+                <p class="mt-md">For a complete list of sources used in creating this timeline, please visit our <a href="../bibliography.html">Bibliography</a> page.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 class="footer-heading">Hatfield-McCoy Feud</h4>
+                    <p>A comprehensive historical fiction research database exploring America's most infamous family feud and its cultural legacy.</p>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../research-portal/index.html">Research Portal</a></li>
+                        <li class="footer-link"><a href="../timeline/index.html">Timeline</a></li>
+                        <li class="footer-link"><a href="../people/index.html">People</a></li>
+                        <li class="footer-link"><a href="../locations/index.html">Locations</a></li>
+                        <li class="footer-link"><a href="../primary-sources/index.html">Primary Sources</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../gallery/index.html">Gallery</a></li>
+                        <li class="footer-link"><a href="../analysis/index.html">Analysis</a></li>
+                        <li class="footer-link"><a href="../family-stories/index.html">Family Stories</a></li>
+                        <li class="footer-link"><a href="../resources/index.html">Resources</a></li>
+                        <li class="footer-link"><a href="../citation-generator.html">Citation Generator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">About</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../about/index.html">About This Project</a></li>
+                        <li class="footer-link"><a href="../research-integrity.html">Research Integrity</a></li>
+                        <li class="footer-link"><a href="../bibliography.html">Bibliography</a></li>
+                        <li class="footer-link"><a href="../contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hatfield-McCoy Feud Research Database. All rights reserved.</p>
+                <p>This website is for educational and research purposes only.</p>
+                <p>NotLizAI - Committed to historical integrity and historical accuracy</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/timeline.js"></script>
+</body>
+</html>

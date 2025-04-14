@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locations - Hatfield-McCoy Feud</title>
+    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/maps.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="../../index.html" class="site-title">Hatfield-McCoy Feud</a>
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="../research-portal/index.html" class="nav-link">Research Portal</a></li>
+                    <li><a href="../timeline/index.html" class="nav-link">Timeline</a></li>
+                    <li><a href="../people/index.html" class="nav-link">People</a></li>
+                    <li><a href="../locations/index.html" class="nav-link active">Locations</a></li>
+                    <li><a href="../primary-sources/index.html" class="nav-link">Primary Sources</a></li>
+                    <li><a href="../gallery/index.html" class="nav-link">Gallery</a></li>
+                    <li><a href="../analysis/index.html" class="nav-link">Analysis</a></li>
+                    <li><a href="../family-stories/index.html" class="nav-link">Family Stories</a></li>
+                    <li><a href="../resources/index.html" class="nav-link">Resources</a></li>
+                    <li><a href="../citation-generator.html" class="nav-link">Citation Generator</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero bg-light">
+            <div class="container">
+                <h1 class="hero-title">Key Locations</h1>
+                <p class="hero-subtitle">Explore the geographical context of the Hatfield-McCoy feud through significant locations where key events took place.</p>
+            </div>
+        </section>
+
+        <section class="container my-lg">
+            <h2 class="section-title">Interactive Map</h2>
+            <p>Explore key locations from the Hatfield-McCoy feud. Click on markers to view details about each site.</p>
+            
+            <div class="map-controls">
+                <div>
+                    <label for="location-filter">Filter Locations:</label>
+                    <select id="location-filter">
+                        <option value="all">All Locations</option>
+                        <option value="hatfield">Hatfield Territory</option>
+                        <option value="mccoy">McCoy Territory</option>
+                        <option value="conflict">Conflict Sites</option>
+                        <option value="modern">Modern Sites</option>
+                    </select>
+                </div>
+                
+                <div class="map-layers">
+                    <span>Map Style:</span>
+                    <button id="terrain-view" class="active">Terrain</button>
+                    <button id="satellite-view">Satellite</button>
+                    <button id="historical-view">Historical</button>
+                </div>
+            </div>
+            
+            <div id="feud-map" class="map-container"></div>
+            
+            <!-- Location details modal -->
+            <div id="location-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <div id="modal-location-content"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container my-lg">
+            <h2 class="section-title">Hatfield Territory</h2>
+            <div class="grid-2">
+                <div class="location-card">
+                    <img src="../../images/devil-anse-cabin.jpg" alt="Devil Anse Hatfield's Cabin" class="location-image">
+                    <div class="location-content">
+                        <h3 class="location-name">Devil Anse Hatfield's Cabin</h3>
+                        <p class="location-type">Hatfield Family Home</p>
+                        <p class="location-description">Home of William Anderson "Devil Anse" Hatfield and headquarters of the Hatfield family during the feud. Located in Logan County, West Virginia (now Mingo County), this cabin served as the center of Hatfield operations.</p>
+                        <div class="location-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Location</span>
+                                <span class="detail-value">Logan County, WV (now Mingo County)</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Significance</span>
+                                <span class="detail-value">Hatfield Family Headquarters</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <img src="../../images/hatfield-cemetery.jpg" alt="Hatfield Cemetery" class="location-image">
+                    <div class="location-content">
+                        <h3 class="location-name">Hatfield Cemetery</h3>
+                        <p class="location-type">Burial Ground</p>
+                        <p class="location-description">Final resting place of Devil Anse Hatfield, marked by a life-sized marble statue, and many other Hatfield family members. The cemetery is located on a hillside in Logan County, West Virginia.</p>
+                        <div class="location-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Location</span>
+                                <span class="detail-value">Sarah Ann, WV</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Notable Feature</span>
+                                <span class="detail-value">Life-sized marble statue of Devil Anse</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <img src="../../images/mate-creek.jpg" alt="Mate Creek" class="location-image">
+                    <div class="location-content">
+                        <h3 class="location-name">Mate Creek</h3>
+                        <p class="location-type">Settlement Area</p>
+                        <p class="location-description">Area of significant Hatfield family settlement, later known as Matewan. This was an important crossing point between territories and a center of Hatfield influence.</p>
+                        <div class="location-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Location</span>
+                                <span class="detail-value">Mingo County, WV</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Significance</span>
+                                <span class="detail-value">Hatfield Settlement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container my-lg">
+            <h2 class="section-title">McCoy Territory</h2>
+            <div class="grid-2">
+                <div class="location-card">
+                    <img src="../../images/randolph-mccoy-cabin.jpg" alt="Randolph McCoy's Cabin" class="location-image">
+                    <div class="location-content">
+                        <h3 class="location-name">Randolph McCoy's Cabin</h3>
+                        <p class="location-type">McCoy Family Home</p>
+                        <p class="location-description">Site of the New Year's Night Raid of 1888, where the Hatfields burned the McCoy home and killed two of Randolph's children. Located in Pike County, Kentucky, this was the primary residence of the McCoy family.</p>
+                        <div class="location-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Location</span>
+                                <span class="detail-value">Pike County, KY</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Significance</span>
+                                <span class="detail-value">Site of 1888 New Year's Night Raid</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <img src="../../images/mccoy-cemetery.jpg" alt="McCoy Cemetery" class="location-image">
+                    <div class="location-content">
+                        <h3 class="location-name">McCoy Cemetery</h3>
+                        <p class="location-type">Burial Ground</p>
+                        <p class="location-description">Burial place of Randolph McCoy, his wife Sarah, and several of their children who died during the feud. Located in Pike County, Kentucky, this cemetery contains the graves of many McCoy family members.</p>
+                        <div class="location-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Location</span>
+                                <span class="detail-value">Pike County, KY</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Notable Burials</span>
+                                <span class="detail-value">Randolph and Sarah McCoy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <img src="../../images/pikeville.jpg" alt="Pikeville, Kentucky" class="location-image">
+                    <div class="location-content">
+                        <h3 class="location-name">Pikeville, Kentucky</h3>
+                        <p class="location-type">County Seat</p>
+                        <p class="location-description">County seat of Pike County where several trials related to the feud took place, including the trial of Cotton Top Mounts. This town was a center of McCoy support and legal proceedings against the Hatfields.</p>
+                        <div class="location-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Location</span>
+                                <span class="detail-value">Pike County, KY</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Significance</span>
+                                <span class="detail-value">Site of feud-related trials</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container my-lg">
+            <h2 class="section-title">Conflict Sites</h2>
+            <div class="grid-2">
+                <div class="location-card">
+                    <img src="../../images/pawpaw-creek.jpg" alt="Pawpaw Creek" class="location-image">
+                    <div class="location-content">
+                        <h3 class="location-name">Pawpaw Creek</h3>
+                        <p class="location-type">Execution Site</p>
+                        <p class="location-description">Site where three McCoy brothers (Tolbert, Pharmer, and Bud) were executed by the Hatfields in 1882. This location along Pawpaw Creek was the scene of one of the most violent episodes of the feud.</p>
+                        <div class="location-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Location</span>
+                                <span class="detail-value">Kentucky-West Virginia border</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Date</span>
+                                <span class="detail-value">August 9, 1882</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <img src="../../images/blackberry-creek.jpg" alt="Blackberry Creek" class="location-image">
+                    <div class="location-content">
+                        <h3 class="location-name">Blackberry Creek</h3>
+                        <p class="location-type">Dispute Location</p>
+                        <p class="location-description">Area where the dispute over a pig—often cited as the initial spark of the feud—took place in 1878. This creek area was the site of the contested ownership of a pig between Floyd Hatfield and Randolph McCoy.</p>
+                        <div class="location-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Location</span>
+                                <span class="detail-value">Pike County, KY</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Date</span>
+                                <span class="detail-value">1878</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <img src="../../images/election-grounds.jpg" alt="Election Grounds" class="location-image">
+                    <div class="location-content">
+                        <h3 class="location-name">Election Grounds</h3>
+                        <p class="location-type">Public Gathering Site</p>
+                        <p class="location-description">Site where Johnse Hatfield met Roseanna McCoy in 1880 and where Ellison Hatfield was fatally stabbed in 1882. This public gathering place was the scene of both romance and violence during the feud.</p>
+                        <div class="location-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Location</span>
+                                <span class="detail-value">Pike County, KY</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Significance</span>
+                                <span class="detail-value">Site of multiple key feud events</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <img src="../../images/tug-river.jpg" alt="Tug Fork River" class="location-image">
+                    <div class="location-content">
+                        <h3 class="location-name">Tug Fork River</h3>
+                        <p class="location-type">Boundary</p>
+                        <p class="location-description">The river that forms the boundary between Kentucky and West Virginia, serving as both a physical and jurisdictional boundary between the families. This natural border complicated legal proceedings during the feud.</p>
+                        <div class="location-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Location</span>
+                                <span class="detail-value">KY-WV Border</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Significance</span>
+                                <span class="detail-value">State boundary between families</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container my-lg">
+            <h2 class="section-title">Modern Sites</h2>
+            <div class="grid-2">
+                <div class="location-card">
+                    <img src="../../images/hatfield-mccoy-trails.jpg" alt="Hatfield-McCoy Trails" class="location-image">
+                    <div class="location-content">
+                        <h3 class="location-name">Hatfield-McCoy Trails</h3>
+                        <p class="location-type">Modern Attraction</p>
+                        <p class="location-description">Modern trail system passing through many historic feud sites, established in 2000 for recreational use. These trails allow visitors to experience the terrain where the feud took place.</p>
+                        <div class="location-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Location</span>
+                                <span class="detail-value">Southern West Virginia</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Established</span>
+                                <span class="detail-value">2000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <img src="../../images/hatfield-mccoy-museum.jpg" alt="Hatfield-McCoy Museum" class="location-image">
+                    <div class="location-content">
+                        <h3 class="location-name">Hatfield-McCoy Museum</h3>
+                        <p class="location-type">Historical Museum</p>
+                        <p class="location-description">Museum housing artifacts, photographs, and documents related to the famous feud. This modern museum preserves the history of the feud and educates visitors about its significance.</p>
+                        <div class="location-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Location</span>
+                                <span class="detail-value">Williamson, WV</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Features</span>
+                                <span class="detail-value">Artifacts, documents, photographs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <img src="../../images/hatfield-mccoy-house.jpg" alt="Hatfield-McCoy House Inn" class="location-image">
+                    <div class="location-content">
+                        <h3 class="location-name">Hatfield-McCoy House Inn</h3>
+                        <p class="location-type">Tourist Accommodation</p>
+                        <p class="location-description">Historic building converted into a themed bed and breakfast catering to tourists interested in the feud. This inn allows visitors to stay in a location connected to the feud's history.</p>
+                        <div class="location-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Location</span>
+                                <span class="detail-value">Williamson, WV</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Type</span>
+                                <span class="detail-value">Bed and Breakfast</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 class="footer-heading">About</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../about/index.html">About this Project</a></li>
+                        <li class="footer-link"><a href="../bibliography.html">Bibliography</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../timeline/index.html">Timeline</a></li>
+                        <li class="footer-link"><a href="../people/index.html">People</a></li>
+                        <li class="footer-link"><a href="../locations/index.html">Locations</a></li>
+                        <li class="footer-link"><a href="../primary-sources/index.html">Primary Sources</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../gallery/index.html">Gallery</a></li>
+                        <li class="footer-link"><a href="../analysis/index.html">Analysis</a></li>
+                        <li class="footer-link"><a href="../family-stories/index.html">Family Stories</a></li>
+                        <li class="footer-link"><a href="../citation-generator.html">Citation Generator</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="../contact/index.html">Contact Us</a></li>
+                        <li class="footer-link"><a href="../resources/index.html">Additional Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>NotLizAI: committed to integrity and accuracy</p>
+                <p>&copy; 2025 Hatfield-McCoy Feud Research Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/maps.js"></script>
+    <script src="../../js/image-display.js"></script>
+    <script>
+        // Location details content for modals
+        window.locationDetails = {
+            'devil-anse-cabin': `
+                <div class="location-detail">
+                    <h2>Devil Anse Hatfield's Cabin</h2>
+                    <img src="../../images/devil-anse-cabin-large.jpg" alt="Devil Anse Hatfield's Cabin" class="detail-image">
+                    <div class="detail-content">
+                        <p>The cabin of William Anderson "Devil Anse" Hatfield served as the headquarters for the Hatfield family during the feud. Located in what was then Logan County, West Virginia (now Mingo County), this homestead was where Devil Anse raised his large family and conducted his timber business.</p>
+                        
+                        <p>The original cabin was a two-story log structure built in the 1870s. It featured multiple rooms to accommodate Devil Anse, his wife Levicy, and their 13 children. The cabin was strategically positioned on a hillside with good visibility of the surrounding area, providing the Hatfields with a defensive advantage.</p>
+                        
+                        <p>After the feud subsided, Devil Anse built a more modern frame house near the same location in the early 1900s. The original cabin no longer stands, but the site remains an important historical location in understanding the geography of the feud.</p>
+                        
+                        <h3>Historical Significance</h3>
+                        <p>As the home of the Hatfield patriarch, this location was central to many feud-related discussions and planning. It was here that Devil Anse and his family would gather to discuss their response to McCoy actions and legal threats from Kentucky authorities.</p>
+                        
+                        <p>The cabin's location in West Virginia, across the Tug Fork River from Kentucky, provided some legal protection for the Hatfields, as Kentucky authorities had no jurisdiction in West Virginia without proper extradition procedures.</p>
+                        
+                        <h3>Visiting Information</h3>
+                        <p>While the original cabin is no longer standing, visitors to the area can see a reconstruction of a similar period cabin at the Hatfield-McCoy Park in Matewan, West Virginia. The actual site of Devil Anse's home is on private property and not accessible to the public.</p>
+                    </div>
+                </div>
+            `,
+            'hatfield-cemetery': `
+                <div class="location-detail">
+                    <h2>Hatfield Cemetery</h2>
+                    <img src="../../images/hatfield-cemetery-large.jpg" alt="Hatfield Cemetery" class="detail-image">
+                    <div class="detail-content">
+                        <p>The Hatfield Cemetery, located in Sarah Ann, West Virginia, is the final resting place of William Anderson "Devil Anse" Hatfield and many members of the Hatfield family. The cemetery is situated on a hillside and contains graves dating back to the 19th century.</p>
+                        
+                        <p>The most notable feature of the cemetery is the life-sized Italian marble statue of Devil Anse Hatfield that marks his grave. The statue was commissioned by his children after his death in 1921 and was created by a stonecutter from Carrara, Italy. It depicts Devil Anse standing with his arms at his sides, wearing a long coat and hat.</p>
+                        
+                        <p>The statue cost $3,000 at the time (equivalent to over $45,000 today) and had to be transported by railroad and then by wagon up the hillside to the cemetery. It has become an iconic symbol of the feud and the most visited site related to the Hatfield family.</p>
+                        
+                        <h3>Notable Burials</h3>
+                        <p>In addition to Devil Anse, the cemetery contains the graves of his wife Levicy Chafin Hatfield, several of their children including Cap Hatfield, and other family members. Many of the graves feature traditional headstones with birth and death dates, while others have more elaborate markers.</p>
+                        
+                        <h3>Visiting Information</h3>
+                        <p>The Hatfield Cemetery is open to the public and is a popular destination for those interested in the history of the feud. Visitors should be respectful of the site as it is still an active cemetery and contains the graves of Hatfield descendants not connected to the feud.</p>
+                        
+                        <p>The cemetery is located off Route 44 near Sarah Ann, West Virginia. A small parking area is available, and visitors must climb a short but steep path to reach the cemetery and Devil Anse's statue.</p>
+                    </div>
+                </div>
+            `,
+            'pawpaw-creek': `
+                <div class="location-detail">
+                    <h2>Pawpaw Creek</h2>
+                    <img src="../../images/pawpaw-creek-large.jpg" alt="Pawpaw Creek" class="detail-image">
+                    <div class="detail-content">
+                        <p>Pawpaw Creek is the site of one of the most violent episodes of the Hatfield-McCoy feud. It was here, on August 9, 1882, that three McCoy brothers—Tolbert, Pharmer, and Bud (Randolph Jr.)—were tied to pawpaw bushes and executed by the Hatfields and their allies.</p>
+                        
+                        <p>The execution was in retaliation for the stabbing of Ellison Hatfield, brother of Devil Anse, which had occurred during an election day dispute. The McCoy brothers had stabbed Ellison multiple times and shot him during a fight. Devil Anse and his men captured the three McCoy brothers and took them across the Tug Fork River into West Virginia.</p>
+                        
+                        <p>The Hatfields held the McCoy brothers captive while waiting to see if Ellison would survive his wounds. When Ellison died two days later, the Hatfields took the McCoy brothers to Pawpaw Creek, tied them to pawpaw bushes, and shot them multiple times in an execution-style killing.</p>
+                        
+                        <h3>Historical Significance</h3>
+                        <p>This event marked a significant escalation in the feud, transforming it from a series of relatively minor disputes and legal battles into a violent blood feud. The execution of the three McCoy brothers led to increased hostility between the families and eventually to legal action by the state of Kentucky against the Hatfields.</p>
+                        
+                        <p>The site is significant not only for its role in the feud but also as an example of the frontier justice and family-based retribution that characterized parts of Appalachia during this period.</p>
+                        
+                        <h3>Location Details</h3>
+                        <p>Pawpaw Creek is located near the Kentucky-West Virginia border. The exact location of the execution site is not marked with any official monument, and much of the area has changed since the 1880s due to development and natural changes in the landscape.</p>
+                    </div>
+                </div>
+            `,
+            'randolph-mccoy-cabin': `
+                <div class="location-detail">
+                    <h2>Randolph McCoy's Cabin</h2>
+                    <img src="../../images/randolph-mccoy-cabin-large.jpg" alt="Randolph McCoy's Cabin" class="detail-image">
+                    <div class="detail-content">
+                        <p>The cabin of Randolph "Ole Ran'l" McCoy was the site of the infamous New Year's Night Raid of 1888, one of the most tragic events of the Hatfield-McCoy feud. Located in Pike County, Kentucky, this was the primary residence of the McCoy family patriarch, his wife Sarah, and their children.</p>
+                        
+                        <p>On January 1, 1888, a group of Hatfields and their allies, led by Jim Vance and Cap Hatfield, attacked the McCoy cabin in the early morning hours. They set the cabin on fire, forcing the family to flee into the cold winter night. During the attack, Alifair McCoy (Randolph's daughter) was shot and killed as she attempted to exit the cabin, and Calvin McCoy (Randolph's son) was also killed while trying to defend the family.</p>
+                        
+                        <p>Sarah McCoy, Randolph's wife, was severely beaten during the attack and never fully recovered from her injuries, dying a few years later. Randolph himself escaped the attack by hiding in a pigpen, while other family members fled into the woods.</p>
+                        
+                        <h3>Historical Significance</h3>
+                        <p>The New Year's Night Raid represented the peak of violence in the feud and led to increased efforts by Kentucky authorities to capture and prosecute the Hatfields. The brutality of the attack, particularly the killing of Alifair McCoy and the beating of Sarah McCoy, turned public opinion against the Hatfields and led to a manhunt that eventually resulted in the capture and trial of several Hatfield family members and allies.</p>
+                        
+                        <h3>Current Status</h3>
+                        <p>The original McCoy cabin was destroyed in the 1888 fire. In recent years, a replica of the cabin has been constructed near the original site as part of efforts to preserve and commemorate the history of the feud. The replica cabin is built according to historical descriptions and includes period-appropriate furnishings to give visitors a sense of how the McCoy family lived.</p>
+                        
+                        <h3>Visiting Information</h3>
+                        <p>The replica of the McCoy cabin is located in Hardy, Kentucky, and is open to visitors as part of the Hatfield-McCoy driving tour. The site includes informational markers that explain the significance of the location and the events of the New Year's Night Raid.</p>
+                    </div>
+                </div>
+            `
+        };
+        
+        // Add more location details as needed
+        
+        // Make sure all images are properly displayed
+        document.addEventListener('DOMContentLoaded', function() {
+            // Process all images on the page
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.onerror = function() {
+                    if (window.createPlaceholderImage) {
+                        window.createPlaceholderImage(this);
+                    }
+                };
+            });
+        });
+    </script>
+</body>
+</html>
